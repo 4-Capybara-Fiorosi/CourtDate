@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5d2hdgiprh1g"]
+
+[ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="23_c37jr"]
+
+[node name="Transition1-2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("23_c37jr")]
+position = Vector2(-154, -100)
+climb_speed = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-231, 114)
+format = 2
