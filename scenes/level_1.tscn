@@ -1,11 +1,10 @@
-[gd_scene load_steps=49 format=3 uid="uid://bvs1u3gdj8oqt"]
+[gd_scene load_steps=49 format=3 uid="uid://c5abpjc2meeb"]
 
 [ext_resource type="Texture2D" uid="uid://c4w2dx2ttoa58" path="res://res/tiles/LVL1/bed.png" id="1_2naux"]
 [ext_resource type="Texture2D" uid="uid://c1ndnf8ilsp8c" path="res://res/tiles/LVL1/floor.png" id="2_huxu5"]
 [ext_resource type="Texture2D" uid="uid://bm68be0mybxoa" path="res://res/tiles/LVL1/paint.png" id="3_1bcd6"]
 [ext_resource type="Texture2D" uid="uid://cq8e4ub8r54jp" path="res://res/tiles/LVL1/pc.png" id="3_55ioq"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="3_lygs1"]
-[ext_resource type="Texture2D" uid="uid://c3tlouguagub8" path="res://res/tiles/LVL1/wall.png" id="3_yj2ty"]
 [ext_resource type="Texture2D" uid="uid://b83xcgt670lc5" path="res://res/tiles/LVL1/key.png" id="4_51k23"]
 [ext_resource type="Texture2D" uid="uid://dtuw7um2a5o2v" path="res://res/tiles/LVL1/interior wall.png" id="4_geglc"]
 [ext_resource type="Texture2D" uid="uid://eqdbq3g2ec0u" path="res://res/tiles/LVL1/round window.png" id="5_h3ko6"]
@@ -23,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://orvlfaaengbj" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_1lgk7"]
 [ext_resource type="Texture2D" uid="uid://ced2d572bn7ip" path="res://res/sprites/interior free.png" id="16_yiq1x"]
 [ext_resource type="Texture2D" uid="uid://bcu4kbu7tw3xl" path="res://res/sprites/DarkHouseTiles.png" id="17_kpyup"]
+[ext_resource type="Texture2D" uid="uid://c3tlouguagub8" path="res://res/tiles/LVL1/wall.png" id="18_jx0mk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4ilp"]
 resource_name = "Bed"
@@ -10055,7 +10055,7 @@ texture = ExtResource("17_kpyup")
 28:32/0/physics_layer_1/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khveu"]
-texture = ExtResource("3_yj2ty")
+texture = ExtResource("18_jx0mk")
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
@@ -10085,7 +10085,7 @@ texture = ExtResource("3_yj2ty")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmjhg"]
 resource_name = "wall"
-texture = ExtResource("3_yj2ty")
+texture = ExtResource("18_jx0mk")
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
