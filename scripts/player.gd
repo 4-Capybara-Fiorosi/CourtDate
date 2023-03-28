@@ -59,12 +59,10 @@ func _get_horizontal_movement_direction() -> float:
 func _get_vertical_movement_direciton() -> float:
 	return Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
-func _on_area_2d_body_entered(_body :Node2D):
+
+func _on_ladder_enter(_body):
 	can_climb = true
 
-func _on_area_2d_body_exited(_body :Node2D):
+
+func _on_ladder_exit(_body):
 	can_climb = false
-
-
-func _unhandled_key_input(event):
-	print(velocity)
