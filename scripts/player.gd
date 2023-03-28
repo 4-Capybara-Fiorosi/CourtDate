@@ -5,7 +5,7 @@ extends CharacterBody2D
 ## Acceleration in px/s^2
 @export var acceleration :float = 25
 ## Decelaration in px/s^2 
-@export var friction :float = 20
+@export var friction :float = 0.1
 ## Ladder climbing speed in px/s
 @export var climb_speed :float = 10
 
@@ -24,10 +24,6 @@ extends CharacterBody2D
 var can_climb :bool = false
 
 
-func _ready():
-	print("Ready")
-
-
 func _physics_process(delta :float):
 	velocity.y += _get_gravity() * delta
 	
@@ -35,9 +31,10 @@ func _physics_process(delta :float):
 	if h_direction != 0:
 		velocity.x = velocity.x + h_direction * acceleration
 	else:
-		velocity.x -= signf(velocity.x) * friction
+		velocity.x = lerpf(velocity.x, 0, friction)
 	
 	velocity.x = clampf(velocity.x, -max_velocity, max_velocity)
+	velocity.x = 0.0 if is_equal_approx(velocity.x, 0) else velocity.x
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		_jump()
@@ -62,10 +59,12 @@ func _get_horizontal_movement_direction() -> float:
 func _get_vertical_movement_direciton() -> float:
 	return Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
-func _on_area_2d_body_entered(body :Node2D):
-	print("Area enter")
+func _on_area_2d_body_entered(_body :Node2D):
 	can_climb = true
 
-func _on_area_2d_body_exited(body :Node2D):
-	print("Area exit")
+func _on_area_2d_body_exited(_body :Node2D):
 	can_climb = false
+
+
+func _unhandled_key_input(event):
+	print(velocity)
