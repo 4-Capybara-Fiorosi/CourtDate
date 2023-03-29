@@ -10,6 +10,8 @@ size = Vector2(10, 26)
 size = Vector2(10, 26)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_bcglq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,14 +21,14 @@ shape = SubResource("RectangleShape2D_mbgf8")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rtqvs")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="LadderCheck" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderCheck"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_5dybj")
 debug_color = Color(0.913725, 0.160784, 0.607843, 0.419608)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="LadderCheck" to="." method="_on_ladder_enter"]
+[connection signal="body_exited" from="LadderCheck" to="." method="_on_ladder_exit"]

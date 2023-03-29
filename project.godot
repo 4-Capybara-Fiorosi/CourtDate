@@ -53,7 +53,9 @@ move_down={
 
 [layer_names]
 
-2d_physics/layer_1="Player - walls"
+2d_physics/layer_1="Enviroment"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Ladders"
 
 [rendering]
 
