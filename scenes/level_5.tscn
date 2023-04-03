@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bcu4kbu7tw3xl" path="res://res/sprites/DarkHouseTiles.png" id="17_tsgvq"]
 [ext_resource type="Texture2D" uid="uid://3uj6lak30djc" path="res://res/sprites/nature-paltformer-tileset-16x16.png" id="18_i068q"]
 [ext_resource type="Texture2D" uid="uid://c3tlouguagub8" path="res://res/tiles/LVL1/wall.png" id="18_nxd8u"]
-[ext_resource type="Texture2D" uid="uid://cp8830wo2mhsl" path="res://res/capy.png" id="19_fr1h7"]
+[ext_resource type="Texture2D" uid="uid://cp8830wo2mhsl" path="res://res/tiles/capy.png" id="19_a0uve"]
 [ext_resource type="Texture2D" uid="uid://b83xcgt670lc5" path="res://res/tiles/LVL1/key.png" id="19_wjpc1"]
 [ext_resource type="Texture2D" uid="uid://cigpeqa11ojvc" path="res://res/tiles/LVL1/kitchen.png" id="20_b8h5e"]
 [ext_resource type="Texture2D" uid="uid://b2dva7yq06h7o" path="res://res/tiles/LVL1/mirror.png" id="21_de53t"]
@@ -10597,7 +10597,7 @@ texture = ExtResource("18_i068q")
 6:10/0/physics_layer_1/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpuhv"]
-texture = ExtResource("19_fr1h7")
+texture = ExtResource("19_a0uve")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0

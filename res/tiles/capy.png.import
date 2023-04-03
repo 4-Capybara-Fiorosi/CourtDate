@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pk6dxia62fjo"
-path="res://.godot/imported/nature-paltformer-tileset-16x16.png-ad8c5f7932f0dfe90c63089cf3debb6d.ctex"
+uid="uid://cp8830wo2mhsl"
+path="res://.godot/imported/capy.png-b1cc53a2f92b98fb4981bf063b4aaaac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/nature-paltformer-tileset-16x16.png"
-dest_files=["res://.godot/imported/nature-paltformer-tileset-16x16.png-ad8c5f7932f0dfe90c63089cf3debb6d.ctex"]
+source_file="res://res/tiles/capy.png"
+dest_files=["res://.godot/imported/capy.png-b1cc53a2f92b98fb4981bf063b4aaaac.ctex"]
 
 [params]
 
