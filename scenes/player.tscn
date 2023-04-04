@@ -30,5 +30,12 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_5dybj")
 debug_color = Color(0.913725, 0.160784, 0.607843, 0.419608)
 
+[node name="CoyoteTimeTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="JumpQueueTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="LadderCheck" to="." method="_on_ladder_enter"]
 [connection signal="body_exited" from="LadderCheck" to="." method="_on_ladder_exit"]
+[connection signal="timeout" from="CoyoteTimeTimer" to="." method="_on_coyote_time_timer_timeout"]
+[connection signal="timeout" from="JumpQueueTimer" to="." method="_on_jump_queue_timer_timeout"]
