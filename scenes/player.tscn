@@ -1,40 +1,65 @@
-[gd_scene load_steps=5 format=3 uid="uid://b12i7mscu7k5x"]
+[gd_scene load_steps=6 format=3 uid="uid://b12i7mscu7k5x"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bcglq"]
-[ext_resource type="Texture2D" uid="uid://cv7l2023wv04r" path="res://res/sprites/mc.png" id="1_rtqvs"]
+[ext_resource type="SpriteFrames" uid="uid://dslq6n1dw8dtb" path="res://res/animations/player_pijamas.tres" id="2_wd6h2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbgf8"]
-size = Vector2(10, 26)
+size = Vector2(12, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dybj"]
-size = Vector2(10, 26)
+size = Vector2(18, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ytuu"]
+size = Vector2(18, 31)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 10
 script = ExtResource("1_bcglq")
+max_velocity = 100.0
+acceleration = 20.0
+friction = 0.99
+jump_time_to_peak = 0.3
+jump_time_to_descent = 0.3
+
+[node name="Skin" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_wd6h2")
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_mbgf8")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_rtqvs")
+metadata/_edit_group_ = true
 
 [node name="LadderCheck" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LadderCheck"]
-position = Vector2(0, 1)
+position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_5dybj")
 debug_color = Color(0.913725, 0.160784, 0.607843, 0.419608)
+
+[node name="InteractableCheck" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableCheck"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_6ytuu")
 
 [node name="CoyoteTimeTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="JumpQueueTimer" type="Timer" parent="."]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, -1)
+zoom = Vector2(2.5, 2.5)
+limit_smoothed = true
+
 [connection signal="body_entered" from="LadderCheck" to="." method="_on_ladder_enter"]
 [connection signal="body_exited" from="LadderCheck" to="." method="_on_ladder_exit"]
+[connection signal="area_entered" from="InteractableCheck" to="." method="_on_interactable_check_area_entered"]
+[connection signal="area_exited" from="InteractableCheck" to="." method="_on_interactable_check_area_exited"]
 [connection signal="timeout" from="CoyoteTimeTimer" to="." method="_on_coyote_time_timer_timeout"]
 [connection signal="timeout" from="JumpQueueTimer" to="." method="_on_jump_queue_timer_timeout"]

@@ -1,3 +1,4 @@
+class_name PlayerCharacter
 extends CharacterBody2D
 
 ## The maximum movement speed of the player in px/s
@@ -7,7 +8,7 @@ extends CharacterBody2D
 ## Decelaration in px/s^2 
 @export var friction :float = 0.1
 ## Ladder climbing speed in px/s
-@export var climb_speed :float = 10
+@export var climb_speed :float = 2
 
 ## Jump Height in pixels
 @export var jump_height :float = 32
@@ -28,15 +29,20 @@ extends CharacterBody2D
 var can_climb :bool = false
 var can_coyote_jump :bool = false
 var is_jump_queued :bool = false
+var current_interactable :Interactable = null
+
+var is_in_pijamas := true
+@onready var skin := $Skin as AnimatedSprite2D;
 
 
 func _physics_process(delta :float):
+	### Movement
 	if is_on_floor():
 		velocity.y = 0.0
 		if is_jump_queued:
 			is_jump_queued = false
 			_jump()
-	else:
+	elif not can_climb:
 		velocity.y += _get_gravity() * delta # TODO(AAL): clampf
 	
 	if is_on_floor() and can_coyote_jump == false:
@@ -61,10 +67,22 @@ func _physics_process(delta :float):
 	
 	var v_direction :float = _get_vertical_movement_direciton()
 	if v_direction != 0 and can_climb:
-		velocity.y = v_direction * climb_speed
+		position.y += v_direction * climb_speed
 	
+	if is_zero_approx(velocity.x):
+		skin.play("idle")
+	else:
+		skin.play("run")
+		if velocity.x > 0.0:
+			skin.flip_h = false
+		else:
+			skin.flip_h = true
 	
 	move_and_slide()
+	
+	### Interaction
+	if Input.is_action_just_pressed("interact") && current_interactable != null:
+		current_interactable.interact(self)
 
 
 func _get_gravity() -> float:
@@ -84,8 +102,21 @@ func _get_vertical_movement_direciton() -> float:
 	return Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
 
+func focus_camera(top: float, right: float, bot: float, left: float) -> void:
+	$Camera2D.limit_top = top
+	$Camera2D.limit_right = right
+	$Camera2D.limit_bottom = bot
+	$Camera2D.limit_left = left
+	const window_size := Vector2(320, 320)
+	var zoom_x :float = abs(left - right) / window_size.x
+	var zoom_y :float = abs(top - bot) / window_size.y
+	var zoom = 1 / min(zoom_x, zoom_y)
+	$Camera2D.zoom = Vector2(zoom, zoom)
+
+
 func _on_ladder_enter(_body):
 	can_climb = true
+	velocity.y = 0
 
 
 func _on_ladder_exit(_body):
@@ -98,3 +129,15 @@ func _on_coyote_time_timer_timeout():
 
 func _on_jump_queue_timer_timeout():
 	is_jump_queued = false
+
+
+func _on_interactable_check_area_entered(area):
+	var interactable := (area as Interactable);
+	interactable.player_entered()
+	current_interactable = interactable
+
+
+func _on_interactable_check_area_exited(area):
+	var interactable := (area as Interactable);
+	interactable.player_exit()
+	current_interactable = null

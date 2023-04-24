@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://c0kmdjwntub0h"]
+
+[ext_resource type="Texture2D" uid="uid://5ocr76f0h1g4" path="res://res/mc_anim.png" id="1_ldw1e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxyeu"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o6ja"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct7up"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uts7q"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flx8n"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yrhg"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn5wq"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgc6n"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcakf"]
+atlas = ExtResource("1_ldw1e")
+region = Rect2(0, 32, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxyeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o6ja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct7up")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uts7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flx8n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yrhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn5wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgc6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcakf")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

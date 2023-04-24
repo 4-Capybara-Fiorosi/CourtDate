@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dslq6n1dw8dtb"]
+
+[ext_resource type="Texture2D" uid="uid://cw6f7qkks0ea0" path="res://res/mc_anim_pijamas.png" id="1_gp1e4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vexna"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h68k7"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8ok3"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkget"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c4t0"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tet5"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skwun"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26s3w"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ornmd"]
+atlas = ExtResource("1_gp1e4")
+region = Rect2(0, 32, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vexna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h68k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8ok3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkget")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c4t0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tet5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skwun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26s3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ornmd")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

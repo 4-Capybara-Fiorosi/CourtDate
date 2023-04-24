@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 *.import
+
+# Krita backup files
+*.kra~
+*.png~

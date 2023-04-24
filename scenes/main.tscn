@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://e8k46opualv"]
 
-[ext_resource type="Texture2D" uid="uid://bbg0cw7q6q5j6" path="res://res/tiles/Assets_City.png" id="1_jpurf"]
+[ext_resource type="Texture2D" uid="uid://be138r0nvbg2a" path="res://res/tiles/Assets_City.png" id="1_jpurf"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="2_ng166"]
-[ext_resource type="Texture2D" uid="uid://c4w2dx2ttoa58" path="res://res/tiles/LVL1/bed.png" id="3_g8kxy"]
-[ext_resource type="Texture2D" uid="uid://c1ndnf8ilsp8c" path="res://res/tiles/LVL1/floor.png" id="4_dqe1h"]
-[ext_resource type="Texture2D" uid="uid://081xmw4r3yv2" path="res://res/tiles/LVL1/duck.png" id="5_l3qpp"]
+[ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="3_g8kxy"]
+[ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="4_dqe1h"]
+[ext_resource type="Texture2D" uid="uid://cjaofjcuecacg" path="res://res/tiles/LVL1/duck.png" id="5_l3qpp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r566j"]
 texture = ExtResource("1_jpurf")
