@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://80gymh54kuo2"]
+
+[ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="1_rydmc"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_rydmc")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)

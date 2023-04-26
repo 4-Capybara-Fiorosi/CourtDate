@@ -1,14 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkqddcbymwg4w"]
+[gd_scene load_steps=4 format=3 uid="uid://dkqddcbymwg4w"]
 
 [ext_resource type="Script" path="res://scripts/drawer_interactable.gd" id="1_xa1lp"]
-[ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="2_a7fvc"]
 [ext_resource type="Texture2D" uid="uid://x3t466c5rvhr" path="res://res/tiles/LVL1/level1_furniture.png" id="2_n3qu4"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fctb7"]
-resource_local_to_scene = true
-shader = ExtResource("2_a7fvc")
-shader_parameter/width = 0.0
-shader_parameter/outline_color = Color(0.866667, 1, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ho26s"]
 size = Vector2(32, 46)
@@ -17,9 +10,9 @@ size = Vector2(32, 46)
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_xa1lp")
+skin_path = NodePath("Skin")
 
 [node name="Skin" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_fctb7")
 texture = ExtResource("2_n3qu4")
 region_enabled = true
 region_rect = Rect2(110.467, 16.2162, 34.9988, 49.3226)
