@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://e8k46opualv"]
 
-[ext_resource type="Texture2D" uid="uid://be138r0nvbg2a" path="res://res/tiles/Assets_City.png" id="1_jpurf"]
+[ext_resource type="Texture2D" uid="uid://c0jlatej5a40d" path="res://res/tiles/Assets_City.png" id="1_jpurf"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="2_ng166"]
-[ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="3_g8kxy"]
-[ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="4_dqe1h"]
-[ext_resource type="Texture2D" uid="uid://cjaofjcuecacg" path="res://res/tiles/LVL1/duck.png" id="5_l3qpp"]
+[ext_resource type="Texture2D" uid="uid://bmdhogbbunvme" path="res://res/tiles/LVL1/bed.png" id="3_g8kxy"]
+[ext_resource type="Texture2D" uid="uid://j771oluonc37" path="res://res/tiles/LVL1/floor.png" id="4_dqe1h"]
+[ext_resource type="Texture2D" uid="uid://bm2yb6bhjx8qf" path="res://res/tiles/LVL1/duck.png" id="5_l3qpp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r566j"]
 texture = ExtResource("1_jpurf")
@@ -26,7 +26,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(262146, 458752, 11, 262148, 458752, 11, 262149, 458752, 11, 262150, 458752, 11, 262151, 458752, 11, 262152, 458752, 11, 851979, 458752, 11, 851980, 458752, 11, 851981, 458752, 11, 851983, 458752, 11, 851984, 458752, 11, 1179653, 458752, 11, 1179652, 458752, 11, 1179651, 458752, 11, 2031624, 458752, 11, 2031625, 458752, 11, 2031626, 458752, 11, 2031627, 458752, 11, 2031628, 458752, 11, 2031629, 458752, 11, 2031630, 458752, 11, 1769476, 458752, 11, 2359317, 458752, 11, 2359318, 458752, 11, 2359319, 458752, 11, 2359320, 458752, 11, 2359321, 458752, 11, 2359322, 458752, 11, 2359323, 458752, 11, 2359324, 458752, 11, 2359325, 458752, 11, 2359326, 458752, 11, 2359327, 458752, 11, 2359328, 458752, 11, 2424864, 458752, 11, 2424865, 458752, 11, 2424866, 458752, 11, 2424867, 458752, 11, 2424868, 458752, 11, 2424869, 458752, 11, 2424870, 458752, 11, 1769505, 458752, 11, 1769506, 458752, 11, 1769507, 458752, 11, 1769508, 458752, 11, 1769509, 458752, 11, 1769510, 458752, 11, 1835046, 458752, 11, 1835047, 458752, 11, 1835048, 458752, 11, 1835049, 458752, 11, 1835050, 458752, 11, 1835051, 458752, 11, 1835052, 458752, 11, 1835053, 458752, 11, 2162728, 458752, 11, 2162729, 458752, 11, 2162730, 458752, 11, 2228267, 458752, 11, 2228268, 458752, 11, 2228269, 458752, 11, 2228270, 458752, 11, 2228271, 458752, 11, 2228272, 458752, 11, 2228273, 458752, 11, 1441822, 458752, 11, 1441821, 458752, 11, 1441820, 458752, 11, 1441819, 458752, 11, 1441818, 458752, 11, 1441817, 458752, 11, 1441816, 458752, 11, 1179671, 458752, 11, 1179670, 458752, 11, 1179669, 458752, 11, 1179668, 458752, 11, 1179667, 458752, 11, 1769479, 458752, 11, 1769480, 458752, 11, 1769477, 458752, 11, 1769478, 458752, 11, 851982, 458752, 11, 262147, 458752, 11, 262153, 458752, 11, 262154, 458752, 11, 262155, 458752, 11, 262156, 458752, 11)
 
 [node name="Player" parent="." instance=ExtResource("2_ng166")]
-position = Vector2(72, 36)
+position = Vector2(37, 32)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
