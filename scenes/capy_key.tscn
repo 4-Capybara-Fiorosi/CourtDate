@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpfs8ftthn8hh"]
+
+[ext_resource type="Script" path="res://scripts/capy_key.gd" id="1_x1cpp"]
+[ext_resource type="Material" uid="uid://80gymh54kuo2" path="res://res/shaders/interactable_material.tres" id="2_bscig"]
+[ext_resource type="Texture2D" uid="uid://x3t466c5rvhr" path="res://res/tiles/LVL1/level1_furniture.png" id="2_lwe04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5twej"]
+size = Vector2(20, 11)
+
+[node name="CapyKey" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_x1cpp")
+skin_path = NodePath("Skin")
+
+[node name="Skin" type="Sprite2D" parent="."]
+material = ExtResource("2_bscig")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lwe04")
+region_enabled = true
+region_rect = Rect2(50, 35, 44, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5twej")

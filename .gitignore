@@ -5,3 +5,7 @@
 # Krita backup files
 *.kra~
 *.png~
+*.kra-autosave.kra
+
+# builds for export
+build/
