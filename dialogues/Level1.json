@@ -1,0 +1,14 @@
+{
+	"newspaper" : 
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Let's read the newspaper."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Local Woman Dies in Tragic Accident"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "The community is mourning the loss of a beloved member after a tragic accident claimed her life yesterday. "},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "According to reports, 45-year-old Edwarda was involved in a crime."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "That...."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "That...."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "THAT IS MY SISTER"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "VANESSA! Come here!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Vanessa? Where are you?"}
+	]
+}
