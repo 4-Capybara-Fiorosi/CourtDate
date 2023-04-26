@@ -50,7 +50,6 @@ func nextPhrase() -> void:
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	$Sprite2D.texture = load(dialog[phraseNum]["Action"])
-	print(dialog[phraseNum]["Name"])
 	$Text.visible_characters = 0
 	
 	while $Text.visible_characters < len($Text.text):

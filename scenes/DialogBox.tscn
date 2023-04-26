@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnbjht8odfb6s"]
+[gd_scene load_steps=8 format=3 uid="uid://b8irabrpwmeae"]
 
 [ext_resource type="Script" path="res://scripts/DialogBox.gd" id="1_3bdxi"]
-[ext_resource type="Texture2D" uid="uid://dlgryft3fp6i4" path="res://res/sprites/BgDialogue.png" id="1_4dsub"]
-[ext_resource type="Texture2D" uid="uid://d3c24a8e3k0w7" path="res://res/mc_anim.png" id="3_56s1f"]
-[ext_resource type="FontFile" uid="uid://cc8hqjkh5k1rf" path="res://res/VCR_OSD_MONO_1.001.ttf" id="3_uey23"]
+[ext_resource type="Texture2D" uid="uid://dh31ljcldd5jd" path="res://res/sprites/BgDialogue.png" id="1_4dsub"]
+[ext_resource type="Texture2D" uid="uid://5ocr76f0h1g4" path="res://res/mc_anim.png" id="3_56s1f"]
+[ext_resource type="FontFile" uid="uid://cdy2vm4uluq8r" path="res://res/VCR_OSD_MONO_1.001.ttf" id="3_uey23"]
 
 [sub_resource type="Theme" id="Theme_nsujc"]
 
