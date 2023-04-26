@@ -251,16 +251,19 @@ width_in_tiles = 7
 height_in_tiles = 16
 
 [node name="Kitchen" parent="CameraFoci" instance=ExtResource("4_gn37q")]
+visible = false
 position = Vector2(-328, 111)
 width_in_tiles = 13
 height_in_tiles = 7
 
 [node name="Hallway" parent="CameraFoci" instance=ExtResource("4_gn37q")]
+visible = false
 position = Vector2(-8, 113)
 width_in_tiles = 29
 height_in_tiles = 7
 
 [node name="Upwards" parent="CameraFoci" instance=ExtResource("4_gn37q")]
+visible = false
 position = Vector2(266, 40)
 width_in_tiles = 6
 height_in_tiles = 16
@@ -299,7 +302,6 @@ in the office."
 [node name="CapyKey3" parent="Doors" instance=ExtResource("7_kmbnu")]
 position = Vector2(-55, -129)
 door_to_open = NodePath("../DoorExit")
-skin_path = NodePath("../CapyKey/Skin")
 
 [node name="Props" type="Node" parent="."]
 
@@ -313,7 +315,7 @@ position = Vector2(291, -1)
 position = Vector2(238, -106)
 
 [node name="Player" parent="." instance=ExtResource("3_lygs1")]
-position = Vector2(-483, 124)
+position = Vector2(166, 8)
 metadata/_edit_group_ = true
 
 [node name="CameraFocus" parent="." instance=ExtResource("4_gn37q")]
