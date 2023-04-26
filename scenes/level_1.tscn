@@ -253,10 +253,14 @@ door_to_open = NodePath("../DoorStairs")
 
 [node name="DoorStairs" parent="Doors" instance=ExtResource("6_bc13j")]
 position = Vector2(-425, 16)
+notification = "Where did I put
+that CapyKey?"
 
 [node name="DoorBedroom" parent="Doors" instance=ExtResource("6_bc13j")]
 z_index = -1
 position = Vector2(-89, 16)
+notification = "I can't go outside 
+in my pajamas !!!"
 
 [node name="Player" parent="." instance=ExtResource("3_lygs1")]
 z_index = 1
