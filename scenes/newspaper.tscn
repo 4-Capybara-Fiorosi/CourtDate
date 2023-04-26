@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://iltiu3xuo8kr"]
+
+[ext_resource type="Script" path="res://scripts/newspaper.gd" id="1_l47kj"]
+[ext_resource type="Texture2D" uid="uid://x3t466c5rvhr" path="res://res/tiles/LVL1/level1_furniture.png" id="2_3cfxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ke1is"]
+size = Vector2(16, 16)
+
+[node name="Node2D" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_l47kj")
+skin_path = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3cfxp")
+region_enabled = true
+region_rect = Rect2(6, 49, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ke1is")

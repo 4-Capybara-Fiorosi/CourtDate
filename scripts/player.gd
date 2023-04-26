@@ -33,9 +33,21 @@ var current_interactable :Interactable = null
 
 var is_in_pijamas := true
 @onready var skin := $Skin as AnimatedSprite2D;
+var is_paused := false;
+
+
+func pause():
+	is_paused = true;
+
+func unpause():
+	is_paused = false;
+
 
 
 func _physics_process(delta :float):
+	if is_paused:
+		return
+	
 	### Movement
 	if is_on_floor():
 		velocity.y = 0.0

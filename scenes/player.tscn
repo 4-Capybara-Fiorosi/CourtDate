@@ -18,12 +18,8 @@ script = ExtResource("1_bcglq")
 max_velocity = 100.0
 acceleration = 20.0
 friction = 0.99
-climb_speed = null
-jump_height = null
 jump_time_to_peak = 0.3
 jump_time_to_descent = 0.3
-coyote_time_seconds = null
-jump_queue_time = null
 
 [node name="Skin" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_wd6h2")

@@ -1,3 +1,4 @@
+
 extends TextureRect
 
 @export var dialogPath = ""
@@ -28,6 +29,7 @@ func _input(event):
 			$Text.visible_characters = len($Text.text)
 			isKeyPressed = true
 
+
 func getDialog() -> Array:
 	var file = FileAccess.open(dialogPath, FileAccess.READ)
 	var content = file.get_as_text()
@@ -39,10 +41,13 @@ func getDialog() -> Array:
 		return output
 	else:
 		return []
-		
+
+
+
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
-		queue_free()
+		get_parent().queue_free()
+		(get_parent() as DialogSupervisor).dialog_finished.emit()
 		return
 	finished = false
 	isKeyPressed = true
@@ -60,4 +65,3 @@ func nextPhrase() -> void:
 	finished = true
 	phraseNum += 1
 	return
-		

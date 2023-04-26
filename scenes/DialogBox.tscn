@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8irabrpwmeae"]
+[gd_scene load_steps=9 format=3 uid="uid://bs78ysh2xyb6p"]
 
 [ext_resource type="Script" path="res://scripts/DialogBox.gd" id="1_3bdxi"]
 [ext_resource type="Texture2D" uid="uid://dh31ljcldd5jd" path="res://res/sprites/BgDialogue.png" id="1_4dsub"]
+[ext_resource type="Script" path="res://scripts/DialogSupervisor.gd" id="1_l2wxf"]
 [ext_resource type="Texture2D" uid="uid://5ocr76f0h1g4" path="res://res/mc_anim.png" id="3_56s1f"]
 [ext_resource type="FontFile" uid="uid://cdy2vm4uluq8r" path="res://res/VCR_OSD_MONO_1.001.ttf" id="3_uey23"]
 
@@ -29,28 +30,20 @@ _data = {
 "DialogAnimation": SubResource("Animation_h8bhe")
 }
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -18.0
-offset_right = 157.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Dialog" type="CanvasLayer"]
+script = ExtResource("1_l2wxf")
 
 [node name="DialogBox" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 176.0
-offset_top = 178.0
-offset_right = 455.0
-offset_bottom = 300.0
+offset_left = 17.0
+offset_top = 141.0
+offset_right = 297.0
+offset_bottom = 263.0
 theme = SubResource("Theme_nsujc")
 texture = ExtResource("1_4dsub")
 script = ExtResource("1_3bdxi")
 dialogPath = "res://dialogues/Level1.json"
 keyString = "newspaper"
+metadata/_edit_group_ = true
 
 [node name="Name" type="RichTextLabel" parent="DialogBox"]
 layout_mode = 0
