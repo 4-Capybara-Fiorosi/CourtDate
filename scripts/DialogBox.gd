@@ -52,7 +52,8 @@ func nextPhrase() -> void:
 	finished = false
 	isKeyPressed = true
 	
-	$Name.bbcode_text = dialog[phraseNum]["Name"]
+	var text = "[center]" + dialog[phraseNum]["Name"] + "[/center]"
+	$Name.bbcode_text = text
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	$Sprite2D.texture = load(dialog[phraseNum]["Action"])
 	$Text.visible_characters = 0
