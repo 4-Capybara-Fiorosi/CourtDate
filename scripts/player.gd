@@ -1,3 +1,4 @@
+class_name PlayerCharacter
 extends CharacterBody2D
 
 ## The maximum movement speed of the player in px/s
@@ -28,7 +29,6 @@ extends CharacterBody2D
 var can_climb :bool = false
 var can_coyote_jump :bool = false
 var is_jump_queued :bool = false
-
 
 func _physics_process(delta :float):
 	if is_on_floor():
@@ -87,6 +87,14 @@ func _get_vertical_movement_direciton() -> float:
 func _on_ladder_enter(_body):
 	can_climb = true
 
+func die():
+	print(Global.spawn_point)
+	self.position = Global.spawn_point
+
+func _ready():
+	self.position = Global.spawn_point
+	if is_instance_valid(self):
+		add_to_group("Player")
 
 func _on_ladder_exit(_body):
 	can_climb = false
@@ -98,3 +106,4 @@ func _on_coyote_time_timer_timeout():
 
 func _on_jump_queue_timer_timeout():
 	is_jump_queued = false
+

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://djlmu14q5hx7h"]
+
+[ext_resource type="Texture2D" uid="uid://b7ervq2ubgskd" path="res://res/sprites/spike-removebg-preview.png" id="1_a88fi"]
+
+[sub_resource type="GDScript" id="GDScript_4ps7t"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_area_2d_body_entered(area):
+	get_tree().call_group(\"Player\",\"die\");
+
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpulm"]
+custom_solver_bias = 0.127
+size = Vector2(252.171, 217.963)
+
+[node name="Spike" type="Sprite2D"]
+position = Vector2(324, -197)
+scale = Vector2(0.0476191, 0.0549997)
+texture = ExtResource("1_a88fi")
+script = SubResource("GDScript_4ps7t")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(976.5, 475.002)
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-976.5, -456.819)
+shape = SubResource("RectangleShape2D_mpulm")
+one_way_collision_margin = 1.6
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

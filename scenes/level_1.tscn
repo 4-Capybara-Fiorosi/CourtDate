@@ -1,10 +1,11 @@
 [gd_scene load_steps=49 format=3 uid="uid://bvs1u3gdj8oqt"]
 
-[ext_resource type="Texture2D" uid="uid://c4w2dx2ttoa58" path="res://res/tiles/LVL1/bed.png" id="1_2naux"]
-[ext_resource type="Texture2D" uid="uid://c1ndnf8ilsp8c" path="res://res/tiles/LVL1/floor.png" id="2_huxu5"]
-[ext_resource type="Texture2D" uid="uid://bm68be0mybxoa" path="res://res/tiles/LVL1/paint.png" id="3_1bcd6"]
-[ext_resource type="Texture2D" uid="uid://cq8e4ub8r54jp" path="res://res/tiles/LVL1/pc.png" id="3_55ioq"]
+[ext_resource type="Texture2D" uid="uid://bfrnlmw13kloq" path="res://res/tiles/LVL1/bed.png" id="1_2naux"]
+[ext_resource type="Texture2D" uid="uid://cjgsimbqp88ow" path="res://res/tiles/LVL1/floor.png" id="2_huxu5"]
+[ext_resource type="Texture2D" uid="uid://cdp4qsh7dc1cu" path="res://res/tiles/LVL1/paint.png" id="3_1bcd6"]
+[ext_resource type="Texture2D" uid="uid://bi14eld8j183b" path="res://res/tiles/LVL1/pc.png" id="3_55ioq"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="3_lygs1"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://c3tlouguagub8" path="res://res/tiles/LVL1/wall.png" id="3_yj2ty"]
 [ext_resource type="Texture2D" uid="uid://b83xcgt670lc5" path="res://res/tiles/LVL1/key.png" id="4_51k23"]
 [ext_resource type="Texture2D" uid="uid://dtuw7um2a5o2v" path="res://res/tiles/LVL1/interior wall.png" id="4_geglc"]
@@ -23,6 +24,27 @@
 [ext_resource type="Texture2D" uid="uid://orvlfaaengbj" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_1lgk7"]
 [ext_resource type="Texture2D" uid="uid://ced2d572bn7ip" path="res://res/sprites/interior free.png" id="16_yiq1x"]
 [ext_resource type="Texture2D" uid="uid://bcu4kbu7tw3xl" path="res://res/sprites/DarkHouseTiles.png" id="17_kpyup"]
+=======
+[ext_resource type="Texture2D" uid="uid://3dwstdq7jxn6" path="res://res/tiles/LVL1/wall.png" id="3_yj2ty"]
+[ext_resource type="Texture2D" uid="uid://dtphdqul0fy1c" path="res://res/tiles/LVL1/key.png" id="4_51k23"]
+[ext_resource type="Texture2D" uid="uid://e25ntjk708jg" path="res://res/tiles/LVL1/interior wall.png" id="4_geglc"]
+[ext_resource type="Texture2D" uid="uid://cyoh3x236gn47" path="res://res/tiles/LVL1/round window.png" id="5_h3ko6"]
+[ext_resource type="Texture2D" uid="uid://bae728vgp8mpg" path="res://res/tiles/LVL1/kitchen.png" id="5_tilsv"]
+[ext_resource type="Texture2D" uid="uid://be7t33lrmwlkx" path="res://res/tiles/LVL1/mirror.png" id="6_hg7ef"]
+[ext_resource type="Texture2D" uid="uid://bq03ty16yj07r" path="res://res/tiles/LVL1/shower.png" id="6_pyvg0"]
+[ext_resource type="Texture2D" uid="uid://couaj0fw0ggmr" path="res://res/tiles/LVL1/nightstand.png" id="7_b45tr"]
+[ext_resource type="Texture2D" uid="uid://dccomqodcdng3" path="res://res/tiles/LVL1/sink.png" id="7_giuaa"]
+[ext_resource type="Texture2D" uid="uid://bpdhkk0fodewn" path="res://res/tiles/LVL1/small window.png" id="8_sxi2a"]
+[ext_resource type="Texture2D" uid="uid://b4nv2ut0762ah" path="res://res/tiles/LVL1/stairs.png" id="9_lg8hu"]
+[ext_resource type="Texture2D" uid="uid://kghoy7lsvb3p" path="res://res/tiles/LVL1/wardrobe.png" id="10_3lqdm"]
+[ext_resource type="Texture2D" uid="uid://dd3kudvfoidap" path="res://res/tiles/wall1.png" id="10_yl8vl"]
+[ext_resource type="Texture2D" uid="uid://bpk75w5rg07ep" path="res://res/tiles/LVL1/wc.png" id="11_wx0cb"]
+[ext_resource type="Texture2D" uid="uid://dm1ppnoe0tb7t" path="res://res/tiles/floor1.png" id="12_p8drs"]
+[ext_resource type="Texture2D" uid="uid://b8rx28acpdwh8" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_1lgk7"]
+[ext_resource type="Texture2D" uid="uid://bxpvka78srt3b" path="res://res/sprites/interior free.png" id="16_yiq1x"]
+[ext_resource type="Texture2D" uid="uid://c7jdl8wtn0yia" path="res://res/sprites/DarkHouseTiles.png" id="17_kpyup"]
+[ext_resource type="Texture2D" uid="uid://rbuhmawty4wk" path="res://res/tiles/nature-paltformer-tileset-16x16.png" id="18_joqpr"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4ilp"]
 resource_name = "Bed"
