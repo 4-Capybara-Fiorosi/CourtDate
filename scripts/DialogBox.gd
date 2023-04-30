@@ -1,4 +1,4 @@
-
+class_name DialogBox
 extends TextureRect
 
 @export var dialogPath = ""

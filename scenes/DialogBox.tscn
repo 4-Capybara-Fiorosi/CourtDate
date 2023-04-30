@@ -43,19 +43,19 @@ texture = ExtResource("1_4dsub")
 script = ExtResource("1_3bdxi")
 dialogPath = "res://dialogues/Level1.json"
 keyString = "newspaper"
-metadata/_edit_group_ = true
 
 [node name="Name" type="RichTextLabel" parent="DialogBox"]
 layout_mode = 0
-offset_left = 33.0
-offset_top = 103.0
-offset_right = 86.0
-offset_bottom = 124.0
+offset_left = 6.0
+offset_top = 101.0
+offset_right = 147.0
+offset_bottom = 126.0
 scale = Vector2(0.568, 0.568)
 theme_override_fonts/normal_font = ExtResource("3_uey23")
 theme_override_font_sizes/normal_font_size = 17
 text = "Nume"
 fit_content = true
+autowrap_mode = 0
 shortcut_keys_enabled = false
 
 [node name="Text" type="RichTextLabel" parent="DialogBox"]
