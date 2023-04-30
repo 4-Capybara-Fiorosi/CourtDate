@@ -163,5 +163,5 @@ func _on_interactable_check_area_exited(area):
 	current_interactable = null
 
 
-func _on_damage_check_body_entered(body):
+func _on_damage_check_body_entered(_body):
 	die()
