@@ -34,6 +34,7 @@ var current_interactable :Interactable = null
 var is_in_pijamas := true
 @onready var skin := $Skin as AnimatedSprite2D;
 var is_paused := false;
+var last_checkpoint_position :Vector2;
 
 
 func pause():
@@ -130,14 +131,13 @@ func _on_ladder_enter(_body):
 	can_climb = true
 	velocity.y = 0
 
+
 func die():
-	print(Global.spawn_point)
-	self.position = Global.spawn_point
+	self.position = last_checkpoint_position;
 
 func _ready():
-	self.position = Global.spawn_point
-	if is_instance_valid(self):
-		add_to_group("Player")
+	last_checkpoint_position = self.position;
+
 
 func _on_ladder_exit(_body):
 	can_climb = false
@@ -161,3 +161,7 @@ func _on_interactable_check_area_exited(area):
 	var interactable := (area as Interactable);
 	interactable.player_exit()
 	current_interactable = null
+
+
+func _on_damage_check_body_entered(body):
+	die()
