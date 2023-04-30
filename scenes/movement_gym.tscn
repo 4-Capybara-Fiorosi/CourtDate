@@ -967,7 +967,6 @@ sources/0 = SubResource("TileSetAtlasSource_gcmm7")
 
 [node name="Player" parent="." instance=ExtResource("1_0vfha")]
 position = Vector2(144, 21)
-collision_mask = 1
 jump_height = 48.0
 metadata/_edit_group_ = true
 

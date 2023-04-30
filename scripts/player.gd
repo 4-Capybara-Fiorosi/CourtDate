@@ -130,6 +130,14 @@ func _on_ladder_enter(_body):
 	can_climb = true
 	velocity.y = 0
 
+func die():
+	print(Global.spawn_point)
+	self.position = Global.spawn_point
+
+func _ready():
+	self.position = Global.spawn_point
+	if is_instance_valid(self):
+		add_to_group("Player")
 
 func _on_ladder_exit(_body):
 	can_climb = false
