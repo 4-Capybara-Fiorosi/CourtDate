@@ -41,18 +41,19 @@ offset_bottom = 263.0
 theme = SubResource("Theme_nsujc")
 texture = ExtResource("1_4dsub")
 script = ExtResource("1_3bdxi")
-dialogPath = "res://dialogues/Level1.json"
+dialogPath = "res://dialogues/JSON/Level1.json"
 keyString = "newspaper"
 
 [node name="Name" type="RichTextLabel" parent="DialogBox"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 101.0
-offset_right = 147.0
-offset_bottom = 126.0
+offset_left = 9.0
+offset_top = 103.0
+offset_right = 141.0
+offset_bottom = 124.0
 scale = Vector2(0.568, 0.568)
 theme_override_fonts/normal_font = ExtResource("3_uey23")
 theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = true
 text = "Nume"
 fit_content = true
 autowrap_mode = 0
