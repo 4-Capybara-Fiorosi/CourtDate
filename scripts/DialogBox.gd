@@ -1,18 +1,18 @@
 class_name DialogBox
 extends TextureRect
 
-@export var dialogPath = ""
-@export var textSpeed = 0.05
-@export var keyString = ""
+@export var dialog_dict :Dictionary;
+@export var textSpeed := 0.05;
+@export var keyString :String;
 
-var dialog 
+var dialog: Array;
 
-var phraseNum = 0
-var finished = false
+var phraseNum :int = 0;
+var finished := false;
 
 func _ready():
 	$Timer.wait_time = textSpeed
-	dialog = getDialog()
+	dialog = dialog_dict[keyString]
 	assert(dialog, "Dialog not found")
 	nextPhrase()
 
@@ -30,20 +30,6 @@ func _input(event):
 			isKeyPressed = true
 
 
-func getDialog() -> Array:
-	var file = FileAccess.open(dialogPath, FileAccess.READ)
-	var content = file.get_as_text()
-	var output = JSON.parse_string(content)
-	if keyString.is_empty():
-		return []
-	output = output[keyString]
-	if typeof(output) == TYPE_ARRAY:
-		return output
-	else:
-		return []
-
-
-
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		get_parent().queue_free()
@@ -52,7 +38,7 @@ func nextPhrase() -> void:
 	finished = false
 	isKeyPressed = true
 	
-	var text = "[center]" + dialog[phraseNum]["Name"] + "[/center]"
+	var text := "[center] %s [/center]" % [dialog[phraseNum]["Name"]]
 	$Name.bbcode_text = text
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	$Sprite2D.texture = load(dialog[phraseNum]["Action"])

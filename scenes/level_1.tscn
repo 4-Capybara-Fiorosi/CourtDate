@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bvs1u3gdj8oqt"]
+[gd_scene load_steps=18 format=3 uid="uid://bvs1u3gdj8oqt"]
 
 [ext_resource type="Texture2D" uid="uid://bmv3i1lvuv44k" path="res://res/tiles/LVL1/level1_tiles.png" id="1_0mawu"]
 [ext_resource type="Texture2D" uid="uid://ckso3hc2sgu58" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dkqddcbymwg4w" path="res://scenes/drawer_interactable.tscn" id="4_81kep"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="4_gn37q"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="6_gyns0"]
+[ext_resource type="Script" path="res://scripts/dialog_interactable.gd" id="6_ykx3n"]
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="7_kmbnu"]
-[ext_resource type="PackedScene" uid="uid://iltiu3xuo8kr" path="res://scenes/newspaper.tscn" id="10_6d3ps"]
+[ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="7_ou0k3"]
 [ext_resource type="PackedScene" uid="uid://dh34wt4kj0eis" path="res://scenes/accelerator.tscn" id="11_0dfm0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ie4h"]
@@ -217,6 +218,15 @@ physics_layer_1/collision_mask = 0
 sources/25 = SubResource("TileSetAtlasSource_7ie4h")
 sources/27 = SubResource("TileSetAtlasSource_ykdts")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
+size = Vector2(16, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_14o4d"]
+resource_local_to_scene = true
+shader = ExtResource("7_ou0k3")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(1, 1, 0, 1)
+
 [node name="Level1" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -239,14 +249,30 @@ layer_0/tile_data = PackedInt32Array(196606, 262169, 2, 196607, 262169, 2, 13107
 
 [node name="Iteractables" type="Node" parent="."]
 
-[node name="Newspaper" parent="Iteractables" instance=ExtResource("10_6d3ps")]
-z_index = -1
-position = Vector2(-280, 133)
-
 [node name="Drawer" parent="Iteractables" instance=ExtResource("4_81kep")]
 z_index = -1
 position = Vector2(1, 9)
 bedroom_door = NodePath("../../Doors/DoorBedroom")
+
+[node name="Newspaper" type="Area2D" parent="Iteractables"]
+position = Vector2(-280, 134)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("6_ykx3n")
+dialog_json = "res://dialogues/JSON/Level1.json"
+dialog_key = "newspaper"
+skin_path = NodePath("Sprite2D")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Iteractables/Newspaper"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_531bf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
+material = SubResource("ShaderMaterial_14o4d")
+texture = ExtResource("3_65ei4")
+region_enabled = true
+region_rect = Rect2(6, 49, 18, 19)
 
 [node name="CameraFoci" type="Node" parent="."]
 

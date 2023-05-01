@@ -35,14 +35,18 @@ var is_in_pijamas := true
 @onready var skin := $Skin as AnimatedSprite2D;
 var is_paused := false;
 var last_checkpoint_position :Vector2;
+var can_interact := true;
 
 
 func pause():
 	is_paused = true;
+	can_interact = false;
+
 
 func unpause():
 	is_paused = false;
-
+	get_tree().create_timer(1.0).timeout.connect(func():
+		self.can_interact = true; );
 
 
 func _physics_process(delta :float):
@@ -94,7 +98,7 @@ func _physics_process(delta :float):
 	move_and_slide()
 	
 	### Interaction
-	if Input.is_action_just_pressed("interact") && current_interactable != null:
+	if Input.is_action_just_pressed("interact") && current_interactable != null && can_interact:
 		current_interactable.interact(self)
 
 

@@ -41,7 +41,6 @@ offset_bottom = 263.0
 theme = SubResource("Theme_nsujc")
 texture = ExtResource("1_4dsub")
 script = ExtResource("1_3bdxi")
-dialogPath = "res://dialogues/JSON/Level1.json"
 keyString = "newspaper"
 
 [node name="Name" type="RichTextLabel" parent="DialogBox"]
