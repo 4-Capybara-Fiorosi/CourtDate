@@ -30,7 +30,7 @@ func _get_property_list():
 	
 	var hint_string :String = dialog_dict.keys().reduce(
 		func(accum, key: String):
-			return accum + ", " + key);
+			return accum + "," + key);
 	
 	properties.append({
 		"name": "dialog_key",
