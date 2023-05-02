@@ -221,14 +221,14 @@ sources/27 = SubResource("TileSetAtlasSource_ykdts")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
 size = Vector2(16, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dprrg"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_un6pt"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_asv0b"]
-size = Vector2(32, 28)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8yks"]
+size = Vector2(32, 29)
 
 [node name="Level1" type="Node2D"]
 
@@ -272,13 +272,13 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_531bf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
-material = SubResource("ShaderMaterial_dprrg")
+material = SubResource("ShaderMaterial_un6pt")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(6, 49, 18, 19)
 
 [node name="Computer" type="Area2D" parent="Iteractables"]
-position = Vector2(63, -134)
+position = Vector2(20, -141)
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("6_ykx3n")
@@ -293,7 +293,8 @@ region_enabled = true
 region_rect = Rect2(63, 65, 34, 31)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Iteractables/Computer"]
-shape = SubResource("RectangleShape2D_asv0b")
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_y8yks")
 
 [node name="CameraFoci" type="Node" parent="."]
 
@@ -392,5 +393,5 @@ position = Vector2(291, -1)
 position = Vector2(238, -106)
 
 [node name="Player" parent="." instance=ExtResource("3_lygs1")]
-position = Vector2(117, -145)
+position = Vector2(105, -10)
 metadata/_edit_group_ = true
