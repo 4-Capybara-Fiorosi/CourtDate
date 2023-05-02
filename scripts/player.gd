@@ -20,7 +20,7 @@ extends CharacterBody2D
 @export var coyote_time_seconds :float = 0.4
 # The time before hitting solid ground while the player can queue a jump
 @export var jump_queue_time :float = 0.2
-
+@export var is_in_pijamas := true
 
 @onready var jump_velocity :float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
 @onready var jump_gravity :float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
@@ -31,7 +31,6 @@ var can_coyote_jump :bool = false
 var is_jump_queued :bool = false
 var current_interactable :Interactable = null
 
-var is_in_pijamas := true
 @onready var skin := $Skin as AnimatedSprite2D;
 var is_paused := false;
 var last_checkpoint_position :Vector2;
@@ -140,6 +139,12 @@ func die():
 	self.position = last_checkpoint_position;
 
 func _ready():
+	var suit = preload("res://res/animations/player_suit.tres")
+	var pijamas = preload("res://res/animations/player_pijamas.tres")
+	if is_in_pijamas == true:
+		self.skin.sprite_frames = pijamas;
+	else:
+		self.skin.sprite_frames = suit;
 	last_checkpoint_position = self.position;
 
 
