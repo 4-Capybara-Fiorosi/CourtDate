@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://bvs1u3gdj8oqt"]
+[gd_scene load_steps=18 format=3 uid="uid://bvs1u3gdj8oqt"]
 
 [ext_resource type="Texture2D" uid="uid://bmv3i1lvuv44k" path="res://res/tiles/LVL1/level1_tiles.png" id="1_0mawu"]
-[ext_resource type="Texture2D" uid="uid://p11ixqqt3wt8" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
+[ext_resource type="Texture2D" uid="uid://ckso3hc2sgu58" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
 [ext_resource type="Texture2D" uid="uid://bmjrr8raq58s2" path="res://res/tiles/LVL1/lvl1_kitchen.png" id="2_jkul4"]
 [ext_resource type="Texture2D" uid="uid://x3t466c5rvhr" path="res://res/tiles/LVL1/level1_furniture.png" id="3_65ei4"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="3_lygs1"]

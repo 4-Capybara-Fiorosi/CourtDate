@@ -13,6 +13,7 @@ var finished := false;
 func _ready():
 	$Timer.wait_time = textSpeed
 	dialog = dialog_dict[keyString]
+	assert(dialog, "Dialog not found")
 	nextPhrase()
 
 var isKeyPressed = false 
