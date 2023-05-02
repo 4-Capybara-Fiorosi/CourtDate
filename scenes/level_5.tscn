@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bew8hvwnpk0w"]
+[gd_scene load_steps=20 format=3 uid="uid://bew8hvwnpk0w"]
 
 [ext_resource type="Texture2D" uid="uid://10jd7lw4ahwf" path="res://res/tiles/LVL5/duck.png" id="5_ljokr"]
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="9_sg8s6"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="10_ocxhk"]
+[ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="11_0bke4"]
 [ext_resource type="Texture2D" uid="uid://bu6tmx3hlai50" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_fwqnq"]
 [ext_resource type="Texture2D" uid="uid://b3f7il17bbyuu" path="res://res/sprites/interior free.png" id="16_e8aw6"]
 [ext_resource type="Texture2D" uid="uid://wpune8vr8vy0" path="res://res/sprites/DarkHouseTiles.png" id="17_tsgvq"]
@@ -18088,3 +18089,168 @@ notification_position = 1
 notification = "Exit finally!"
 
 [node name="CameraFocus" type="Node" parent="."]
+
+[node name="CameraFocus" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(-34, -182)
+width_in_tiles = 18
+height_in_tiles = 11
+
+[node name="CameraFocus3" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(-4, -326)
+width_in_tiles = 22
+height_in_tiles = 9
+
+[node name="CameraFocus15" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(345, -275)
+width_in_tiles = 17
+height_in_tiles = 7
+
+[node name="CameraFocus2" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(-155, -451)
+width_in_tiles = 3
+height_in_tiles = 9
+
+[node name="CameraFocus4" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(-41, -702)
+width_in_tiles = 17
+height_in_tiles = 10
+
+[node name="CameraFocus5" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(16, -554)
+width_in_tiles = 24
+height_in_tiles = 10
+
+[node name="CameraFocus6" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(38, -446)
+width_in_tiles = 21
+height_in_tiles = 6
+
+[node name="CameraFocus7" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(189, -343)
+width_in_tiles = 4
+height_in_tiles = 13
+
+[node name="CameraFocus8" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(164, -174)
+width_in_tiles = 7
+height_in_tiles = 10
+
+[node name="CameraFocus9" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(343, -158)
+width_in_tiles = 17
+height_in_tiles = 8
+
+[node name="CameraFocus10" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(485, -212)
+width_in_tiles = 6
+height_in_tiles = 5
+
+[node name="CameraFocus11" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(519, -120)
+width_in_tiles = 3
+height_in_tiles = 11
+
+[node name="CameraFocus12" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(575, -128)
+width_in_tiles = 6
+height_in_tiles = 5
+
+[node name="CameraFocus13" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(646, -78)
+width_in_tiles = 6
+height_in_tiles = 8
+
+[node name="CameraFocus16" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(516, -334)
+width_in_tiles = 3
+height_in_tiles = 12
+
+[node name="CameraFocus17" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(353, -381)
+width_in_tiles = 19
+height_in_tiles = 8
+
+[node name="CameraFocus18" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(334, -484)
+width_in_tiles = 18
+height_in_tiles = 5
+
+[node name="CameraFocus19" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(508, -480)
+width_in_tiles = 6
+height_in_tiles = 4
+
+[node name="CameraFocus20" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(483, -632)
+width_in_tiles = 3
+height_in_tiles = 15
+
+[node name="CameraFocus21" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(329, -627)
+width_in_tiles = 18
+height_in_tiles = 13
+
+[node name="CameraFocus22" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(349, -808)
+width_in_tiles = 20
+height_in_tiles = 7
+
+[node name="CameraFocus23" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(556, -809)
+width_in_tiles = 6
+height_in_tiles = 7
+
+[node name="CameraFocus24" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(676, -791)
+width_in_tiles = 9
+height_in_tiles = 5
+
+[node name="CameraFocus25" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(750, -847)
+width_in_tiles = 4
+height_in_tiles = 4
+
+[node name="CameraFocus26" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(754, -693)
+width_in_tiles = 20
+height_in_tiles = 9
+
+[node name="CameraFocus27" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(754, -543)
+width_in_tiles = 20
+height_in_tiles = 12
+
+[node name="CameraFocus28" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(821, -415)
+width_in_tiles = 11
+height_in_tiles = 10
+
+[node name="CameraFocus29" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(916, -288)
+width_in_tiles = 3
+height_in_tiles = 16
+
+[node name="CameraFocus30" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(838, -132)
+width_in_tiles = 13
+height_in_tiles = 5
+
+[node name="CameraFocus31" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(830, -260)
+width_in_tiles = 6
+height_in_tiles = 11
+
+[node name="CameraFocus32" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(693, -290)
+width_in_tiles = 13
+height_in_tiles = 7
+
+[node name="CameraFocus14" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(749, -44)
+width_in_tiles = 10
+height_in_tiles = 4
+
+[node name="CameraFocus2" parent="." instance=ExtResource("11_0bke4")]
+position = Vector2(614, -381)
+width_in_tiles = 11
+height_in_tiles = 6
