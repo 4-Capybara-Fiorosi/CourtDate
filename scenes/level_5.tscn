@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://bew8hvwnpk0w"]
+[gd_scene load_steps=21 format=3 uid="uid://bew8hvwnpk0w"]
 
 [ext_resource type="Texture2D" uid="uid://10jd7lw4ahwf" path="res://res/tiles/LVL5/duck.png" id="5_ljokr"]
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="9_sg8s6"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="10_ocxhk"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="11_0bke4"]
+[ext_resource type="Texture2D" uid="uid://cingr3kuqlhgm" path="res://res/tiles/LVL5/lvl 5 bgd.png" id="13_7fvnu"]
 [ext_resource type="Texture2D" uid="uid://bu6tmx3hlai50" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_fwqnq"]
 [ext_resource type="Texture2D" uid="uid://b3f7il17bbyuu" path="res://res/sprites/interior free.png" id="16_e8aw6"]
 [ext_resource type="Texture2D" uid="uid://wpune8vr8vy0" path="res://res/sprites/DarkHouseTiles.png" id="17_tsgvq"]
@@ -17990,12 +17991,12 @@ position = Vector2(753, -837)
 position = Vector2(769, -118)
 
 [node name="Player" parent="." instance=ExtResource("23_pv30t")]
-position = Vector2(-141, -125)
+position = Vector2(-139, -133)
 collision_mask = 17
 friction = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -13)
+position = Vector2(-2, -9)
 
 [node name="Props" type="Node" parent="."]
 
@@ -18028,10 +18029,6 @@ jump_height = 70.0
 
 [node name="Accelerator8" parent="Props" instance=ExtResource("28_esft8")]
 position = Vector2(55, -234)
-jump_height = 70.0
-
-[node name="Accelerator9" parent="Props" instance=ExtResource("28_esft8")]
-position = Vector2(784, -502)
 jump_height = 70.0
 
 [node name="Accelerator10" parent="Props" instance=ExtResource("28_esft8")]
@@ -18091,23 +18088,13 @@ notification = "Exit finally!"
 [node name="CameraFocus" type="Node" parent="."]
 
 [node name="CameraFocus" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(-34, -182)
+position = Vector2(-37, -251)
 width_in_tiles = 18
-height_in_tiles = 11
+height_in_tiles = 20
 
 [node name="CameraFocus3" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(-4, -326)
-width_in_tiles = 22
-height_in_tiles = 9
-
-[node name="CameraFocus15" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(345, -275)
-width_in_tiles = 17
-height_in_tiles = 7
-
-[node name="CameraFocus2" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(-155, -451)
-width_in_tiles = 3
+position = Vector2(138, -322)
+width_in_tiles = 4
 height_in_tiles = 9
 
 [node name="CameraFocus4" parent="CameraFocus" instance=ExtResource("11_0bke4")]
@@ -18116,141 +18103,109 @@ width_in_tiles = 17
 height_in_tiles = 10
 
 [node name="CameraFocus5" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(16, -554)
-width_in_tiles = 24
-height_in_tiles = 10
-
-[node name="CameraFocus6" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(38, -446)
-width_in_tiles = 21
-height_in_tiles = 6
-
-[node name="CameraFocus7" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(189, -343)
-width_in_tiles = 4
+position = Vector2(-34, -518)
+width_in_tiles = 18
 height_in_tiles = 13
 
+[node name="CameraFocus6" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(127, -475)
+width_in_tiles = 9
+height_in_tiles = 10
+
+[node name="CameraFocus7" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(190, -337)
+width_in_tiles = 3
+height_in_tiles = 11
+
 [node name="CameraFocus8" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(164, -174)
+position = Vector2(160, -168)
 width_in_tiles = 7
 height_in_tiles = 10
 
 [node name="CameraFocus9" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(343, -158)
+position = Vector2(350, -176)
 width_in_tiles = 17
-height_in_tiles = 8
-
-[node name="CameraFocus10" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(485, -212)
-width_in_tiles = 6
-height_in_tiles = 5
-
-[node name="CameraFocus11" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(519, -120)
-width_in_tiles = 3
 height_in_tiles = 11
-
-[node name="CameraFocus12" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(575, -128)
-width_in_tiles = 6
-height_in_tiles = 5
 
 [node name="CameraFocus13" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(646, -78)
-width_in_tiles = 6
-height_in_tiles = 8
-
-[node name="CameraFocus16" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(516, -334)
-width_in_tiles = 3
-height_in_tiles = 12
-
-[node name="CameraFocus17" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(353, -381)
-width_in_tiles = 19
-height_in_tiles = 8
-
-[node name="CameraFocus18" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(334, -484)
-width_in_tiles = 18
-height_in_tiles = 5
-
-[node name="CameraFocus19" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(508, -480)
-width_in_tiles = 6
-height_in_tiles = 4
-
-[node name="CameraFocus20" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(483, -632)
-width_in_tiles = 3
-height_in_tiles = 15
-
-[node name="CameraFocus21" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(329, -627)
-width_in_tiles = 18
-height_in_tiles = 13
-
-[node name="CameraFocus22" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(349, -808)
-width_in_tiles = 20
-height_in_tiles = 7
-
-[node name="CameraFocus23" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(556, -809)
-width_in_tiles = 6
-height_in_tiles = 7
-
-[node name="CameraFocus24" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(676, -791)
-width_in_tiles = 9
-height_in_tiles = 5
-
-[node name="CameraFocus25" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(750, -847)
-width_in_tiles = 4
-height_in_tiles = 4
-
-[node name="CameraFocus26" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(754, -693)
-width_in_tiles = 20
-height_in_tiles = 9
-
-[node name="CameraFocus27" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(754, -543)
-width_in_tiles = 20
-height_in_tiles = 12
-
-[node name="CameraFocus28" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(821, -415)
-width_in_tiles = 11
+position = Vector2(611, -94)
+width_in_tiles = 10
 height_in_tiles = 10
 
-[node name="CameraFocus29" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(916, -288)
+[node name="CameraFocus16" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(512, -245)
 width_in_tiles = 3
-height_in_tiles = 16
+height_in_tiles = 24
 
-[node name="CameraFocus30" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(838, -132)
-width_in_tiles = 13
-height_in_tiles = 5
-
-[node name="CameraFocus31" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(830, -260)
-width_in_tiles = 6
+[node name="CameraFocus17" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(354, -354)
+width_in_tiles = 17
 height_in_tiles = 11
 
+[node name="CameraFocus18" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(329, -481)
+width_in_tiles = 16
+height_in_tiles = 5
+
+[node name="CameraFocus20" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(505, -604)
+width_in_tiles = 6
+height_in_tiles = 19
+
+[node name="CameraFocus21" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(329, -629)
+width_in_tiles = 16
+height_in_tiles = 12
+
+[node name="CameraFocus22" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(488, -835)
+width_in_tiles = 36
+height_in_tiles = 10
+
+[node name="CameraFocus26" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(753, -666)
+width_in_tiles = 20
+height_in_tiles = 12
+
+[node name="CameraFocus27" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(811, -480)
+width_in_tiles = 15
+height_in_tiles = 15
+
+[node name="CameraFocus29" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(915, -267)
+width_in_tiles = 3
+height_in_tiles = 11
+
+[node name="CameraFocus31" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(818, -219)
+width_in_tiles = 9
+height_in_tiles = 15
+
 [node name="CameraFocus32" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(693, -290)
+position = Vector2(694, -309)
 width_in_tiles = 13
-height_in_tiles = 7
+height_in_tiles = 9
+
+[node name="CameraFocus33" parent="CameraFocus" instance=ExtResource("11_0bke4")]
+position = Vector2(582, -377)
+width_in_tiles = 7
+height_in_tiles = 5
 
 [node name="CameraFocus14" parent="CameraFocus" instance=ExtResource("11_0bke4")]
 position = Vector2(749, -44)
 width_in_tiles = 10
 height_in_tiles = 4
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Part1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(733, -622)
+texture = ExtResource("13_7fvnu")
+
 [node name="CameraFocus2" parent="." instance=ExtResource("11_0bke4")]
-position = Vector2(614, -381)
-width_in_tiles = 11
-height_in_tiles = 6
+position = Vector2(913, -139)
+width_in_tiles = 6
+height_in_tiles = 5
