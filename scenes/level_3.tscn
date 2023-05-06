@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://calqd06tsqpg7"]
+[gd_scene load_steps=51 format=3 uid="uid://calqd06tsqpg7"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
@@ -21,9 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://cv3iplj8sxuf" path="res://res/tiles/LVL1/mirror.png" id="21_p70g1"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="22_o5wat"]
 [ext_resource type="Texture2D" uid="uid://8x8b125ryy3j" path="res://res/tiles/LVL1/nightstand.png" id="22_taor0"]
-[ext_resource type="PackedScene" uid="uid://bc1sf7h4qvyds" path="res://scenes/alarm_switch.tscn" id="23_itvg5"]
+[ext_resource type="Script" path="res://scripts/alarm_switch.gd" id="23_5mxgw"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="23_ywuix"]
+[ext_resource type="Texture2D" uid="uid://cga2bc1mq3500" path="res://res/tiles/LVL3/alarm_switch_opened.png" id="24_1lmx1"]
+[ext_resource type="Material" uid="uid://80gymh54kuo2" path="res://res/shaders/interactable_material.tres" id="24_8lprs"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="24_xe8dw"]
+[ext_resource type="PackedScene" uid="uid://b3sk8txkr6awm" path="res://scenes/BreakingPlatform.tscn" id="25_hj6cf"]
+[ext_resource type="PackedScene" uid="uid://cehjo6dkl4pi0" path="res://scenes/invisible_dialogue.tscn" id="28_ydgn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4ilp"]
 resource_name = "Bed"
@@ -10297,6 +10301,9 @@ sources/0 = SubResource("TileSetAtlasSource_t4ilp")
 sources/23 = SubResource("TileSetAtlasSource_m1ld5")
 sources/25 = SubResource("TileSetAtlasSource_h52s1")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_780sm"]
+size = Vector2(29, 30)
+
 [node name="Level3" type="Node2D"]
 
 [node name="Wall_and_Flooring" type="TileMap" parent="."]
@@ -10306,9 +10313,10 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-393236, 65561, 0, -393237, 65561, 0, -393235, 65561, 0, -917523, 65561, 2, -917524, 65561, 2, -917525, 65561, 2, -917526, 65561, 2, -917522, 65561, 2, -917527, 65561, 2, -917528, 262169, 0, -393238, 65561, 0, -393239, 65561, 0, -393240, 262169, 1, -851992, 131097, 1, -786456, 131097, 1, -720920, 131097, 1, -655384, 131097, 1, -589848, 131097, 1, -524312, 131097, 1, -458776, 131097, 1, -393234, 65561, 0, -393233, 65561, 0, -393232, 65561, 0, -393231, 65561, 0, -393230, 65561, 0, -393229, 65561, 0, -393228, 65561, 0, -393227, 65561, 0, -917521, 65561, 2, -917520, 65561, 2, -917519, 65561, 2, -917518, 65561, 2, -917517, 65561, 2, -917516, 65561, 2, -917515, 196633, 0, -851979, 196633, 1, -786443, 196633, 1, -720907, 196633, 1, -655371, 196633, 1, -589835, 196633, 2)
 
 [node name="Player" parent="." instance=ExtResource("23_ywuix")]
-position = Vector2(-116, -133)
+position = Vector2(-155, -132)
 climb_speed = 100.0
 is_in_pijamas = false
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(31, -25)
@@ -10316,6 +10324,8 @@ position = Vector2(31, -25)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Interactables" type="Node" parent="."]
+
+[node name="Polizei" type="Area2D" parent="Interactables"]
 
 [node name="Doors" type="Node" parent="."]
 
@@ -10325,10 +10335,22 @@ notification_position = 1
 notification = "I need to shut 
 down the lights"
 
-[node name="AlarmSwitch" parent="Doors" instance=ExtResource("23_itvg5")]
-position = Vector2(-57, -144)
-scale = Vector2(0.5, 0.5)
+[node name="Interactable" type="Area2D" parent="Doors"]
+position = Vector2(-50, -150)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("23_5mxgw")
 door_to_open = NodePath("../FirstDoor")
+skin_path = NodePath("AlarmSwitch")
+
+[node name="AlarmSwitch" type="Sprite2D" parent="Doors/Interactable"]
+material = ExtResource("24_8lprs")
+texture = ExtResource("24_1lmx1")
+
+[node name="AlarmSwitchShape" type="CollisionShape2D" parent="Doors/Interactable"]
+position = Vector2(0.0419998, 0)
+scale = Vector2(1, 0.966522)
+shape = SubResource("RectangleShape2D_780sm")
 
 [node name="CameraFoci" type="Node" parent="."]
 
@@ -10337,3 +10359,13 @@ visible = false
 position = Vector2(-70, -170)
 width_in_tiles = 14
 height_in_tiles = 9
+
+[node name="BreakingPlatform" parent="." instance=ExtResource("25_hj6cf")]
+position = Vector2(-89, -126)
+
+[node name="InvisibleDialogue" parent="." instance=ExtResource("28_ydgn6")]
+position = Vector2(-124, -128)
+collision_layer = 0
+collision_mask = 2
+dialog_json = "res://dialogues/JSON/Level3.json"
+dialog_key = "police"

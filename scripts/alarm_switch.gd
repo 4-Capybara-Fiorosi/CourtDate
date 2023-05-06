@@ -9,5 +9,5 @@ var openedSwitch = preload("res://res/tiles/LVL3/alarm_switch_opened.png")
 
 func interact(_player: PlayerCharacter):
 	door.open()
-	$Skin.texture = closedSwitch
-	$Shape.visible = false
+	$AlarmSwitch.texture = closedSwitch
+	$AlarmSwitchShape.visible = false

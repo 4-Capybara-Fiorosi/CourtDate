@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqnu8it0yomhr"
-path="res://.godot/imported/level3_tiles.png-d25dcabdbe15ed71c37ece8e793ec3b8.ctex"
+uid="uid://bg03258bp0rbm"
+path="res://.godot/imported/platform_animation.png-e5e0469362d5d524137690e1c0a1df27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tiles/LVL3/level3_tiles.png"
-dest_files=["res://.godot/imported/level3_tiles.png-d25dcabdbe15ed71c37ece8e793ec3b8.ctex"]
+source_file="res://res/tiles/LVL3/platform_animation.png"
+dest_files=["res://.godot/imported/platform_animation.png-e5e0469362d5d524137690e1c0a1df27.ctex"]
 
 [params]
 
