@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://bew8hvwnpk0w"]
+[gd_scene load_steps=25 format=3 uid="uid://bew8hvwnpk0w"]
 
 [ext_resource type="Texture2D" uid="uid://10jd7lw4ahwf" path="res://res/tiles/LVL5/duck.png" id="5_ljokr"]
 [ext_resource type="Script" path="res://scripts/dialog_interactable.gd" id="8_txruy"]
+[ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="9_8t7r1"]
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="9_sg8s6"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="10_ocxhk"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="11_0bke4"]
@@ -17969,6 +17970,12 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dajlt"]
+resource_local_to_scene = true
+shader = ExtResource("9_8t7r1")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(1, 1, 0, 1)
+
 [node name="Level5" type="Node2D"]
 
 [node name="Platforms" type="TileMap" parent="."]
@@ -18011,6 +18018,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/DialogInteractible"]
+material = SubResource("ShaderMaterial_dajlt")
 position = Vector2(6, 5)
 texture = ExtResource("5_ljokr")
 
@@ -18018,6 +18026,7 @@ texture = ExtResource("5_ljokr")
 position = Vector2(-128, -143)
 collision_mask = 17
 friction = 1.0
+is_in_pijamas = false
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-2, -9)
