@@ -18,6 +18,8 @@ extends StaticBody2D
 @export_multiline var notification :String = "";
 var is_closed :bool = true;
 
+@export_enum("Closed:0","Open:1") var start_state :int = 0;
+
 func _ready():
 	$AnimatedSprite2D.position.x = 0;
 	$AnimatedSprite2D.play("closed");
@@ -31,6 +33,9 @@ func _ready():
 		$NotifyArea.position.x = -4;
 		$Notification.position.x = -60;
 		notification_position = 1
+	
+	if(start_state == 1):
+		open()
 
 func _process(_delta):
 	if not Engine.is_editor_hint():
@@ -57,6 +62,8 @@ func _on_notify_area_body_entered(body):
 	if not is_closed:
 		return
 	if not body is PlayerCharacter:
+		return;
+	if self.notification.is_empty():
 		return;
 	body = body as PlayerCharacter;
 	$Notification.set_visible(true)

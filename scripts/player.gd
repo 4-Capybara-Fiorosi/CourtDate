@@ -55,7 +55,8 @@ func _physics_process(delta :float):
 	
 	### Movement
 	if is_on_floor():
-		velocity.y = 0.0
+		if velocity.y > 20:
+			velocity.y = 0.0
 		if is_jump_queued:
 			is_jump_queued = false
 			_jump()

@@ -13,7 +13,8 @@ func _on_body_entered(body):
 		return
 	
 	var player := body as PlayerCharacter;
-	player.velocity.y = jump_velocity;
+	player.velocity.y = self.jump_velocity;
+	
 	deactivate();
 	$RespawnTimer.start(3);
 
