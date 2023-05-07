@@ -18163,14 +18163,14 @@ width_in_tiles = 36
 height_in_tiles = 10
 
 [node name="CameraFocus26" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(753, -666)
+position = Vector2(755, -659)
 width_in_tiles = 20
 height_in_tiles = 12
 
 [node name="CameraFocus27" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(811, -480)
-width_in_tiles = 15
-height_in_tiles = 15
+position = Vector2(805, -508)
+width_in_tiles = 13
+height_in_tiles = 13
 
 [node name="CameraFocus29" parent="CameraFocus" instance=ExtResource("11_0bke4")]
 position = Vector2(915, -267)
@@ -18209,3 +18209,8 @@ texture = ExtResource("13_7fvnu")
 position = Vector2(913, -139)
 width_in_tiles = 6
 height_in_tiles = 5
+
+[node name="CameraFocus3" parent="." instance=ExtResource("11_0bke4")]
+position = Vector2(860, -408)
+width_in_tiles = 8
+height_in_tiles = 6
