@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2ir4hvgrnemt"]
+
+[ext_resource type="Script" path="res://scripts/police_npc.gd" id="1_nellu"]
+[ext_resource type="Texture2D" uid="uid://d0ppqfogqrxg2" path="res://dialogues/Police/police_front.png" id="1_stfkh"]
+[ext_resource type="Script" path="res://scripts/InvisibleDialogue.gd" id="2_hc684"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fxn8"]
+size = Vector2(89, 32)
+
+[node name="PoliceNPC" type="Sprite2D"]
+texture = ExtResource("1_stfkh")
+script = ExtResource("1_nellu")
+leftLightLength = 20
+
+[node name="DangerZone" type="Area2D" parent="."]
+position = Vector2(0.5, 0)
+script = ExtResource("2_hc684")
+dialog_json = "res://dialogues/JSON/Level3.json"
+dialog_key = "police_catch"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerZone"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_0fxn8")
+
+[node name="LeftLight" type="Polygon2D" parent="."]
+position = Vector2(-21, 0.5)
+scale = Vector2(1, 0.914)
+color = Color(1, 1, 0.654902, 0.207843)
+polygon = PackedVector2Array(-20, -18, -20, -0.886688, -20, 17, 13, 17, 13, 17, 13, -18, 1.55081, -18)
+
+[node name="RightLight" type="Polygon2D" parent="."]
+position = Vector2(26, 0.5)
+scale = Vector2(1, 0.918)
+color = Color(1, 1, 0.654902, 0.207843)
+polygon = PackedVector2Array(-16, -18, -16, -0.886688, -16, 17, 20, 17, 20, -0.542461, 20, -18, 1.71301, -18)

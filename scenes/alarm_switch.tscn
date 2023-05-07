@@ -1,7 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc1sf7h4qvyds"]
+[gd_scene load_steps=7 format=3 uid="uid://ctww2gug8ur7y"]
 
 [ext_resource type="Script" path="res://scripts/alarm_switch.gd" id="1_j8xrs"]
+[ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="2_a41y2"]
 [ext_resource type="Material" uid="uid://80gymh54kuo2" path="res://res/shaders/interactable_material.tres" id="2_w0wuj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_akyv5"]
+resource_local_to_scene = true
+shader = ExtResource("2_a41y2")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(1, 1, 0, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hryqo"]
 load_path = "res://.godot/imported/alarm_switch_opened.png-f9345c01205de6333624619793dcd00a.ctex"
@@ -16,7 +23,7 @@ script = ExtResource("1_j8xrs")
 skin_path = NodePath("Skin")
 
 [node name="Skin" type="Sprite2D" parent="."]
-material = ExtResource("2_w0wuj")
+material = SubResource("ShaderMaterial_akyv5")
 use_parent_material = true
 texture = SubResource("CompressedTexture2D_hryqo")
 

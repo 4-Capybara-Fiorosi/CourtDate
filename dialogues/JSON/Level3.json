@@ -1,14 +1,23 @@
 {
-	"police" : 
+	"police_catch" :
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Let's read the newspaper."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Local Woman Dies in Tragic Accident"},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "The community is mourning the loss of a beloved member after a tragic accident claimed her life yesterday. "},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "According to reports, 45-year-old Edwarda was involved in a crime."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "That...."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "That...."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "THAT IS MY SISTER"},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "VANESSA! Come here!"},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Vanessa? Where are you?"}
+		{"Name": "Police", "Action" : "res://dialogues/Police/police_front.png", "Text" : "Freeze! You are under arrest!."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "Please. I am innocent!"},
+	],
+	"police_first" : 
+	[
+		{"Name": "Police", "Action" : "res://dialogues/Police/police_normal.png", "Text" : "We saw him enter the building. We will capture him."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "They are here. I need to get to the top floor to get the evidence."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "If I have close the lights, I can infiltrate better. "}
+	],
+	"police_no_light":
+	[
+		{"Name": "Police", "Action" : "res://dialogues/Police/police_surprised.png", "Text" : "Where are the lights? We need to turn them on."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Good. Now it will be easier to get to the top floor."},
+	],
+	"police_present":
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/Police/MCSurprised.png", "Text" : "Oh no! There is a cop. Hold on"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "He must not see him, otherwise I will go to jail."},
 	]
 }

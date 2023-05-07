@@ -81,15 +81,18 @@ texture = ExtResource("1_4nyr4")
 hframes = 32
 vframes = 45
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakingPlatform"]
+[node name="CollShapeOne" type="CollisionShape2D" parent="BreakingPlatform"]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_octwk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BreakingPlatform"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakingPlatform/StaticBody2D"]
+[node name="CollShapeTwo" type="CollisionShape2D" parent="BreakingPlatform/StaticBody2D"]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_fpuwn")
 
+[node name="RespawnTimer" type="Timer" parent="BreakingPlatform"]
+
 [connection signal="body_entered" from="BreakingPlatform" to="BreakingPlatform" method="_on_body_entered"]
 [connection signal="animation_finished" from="BreakingPlatform/AnimationPlayer" to="BreakingPlatform" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="BreakingPlatform/RespawnTimer" to="BreakingPlatform" method="_on_respawn_timer_timeout"]

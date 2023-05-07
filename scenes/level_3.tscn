@@ -1,16 +1,16 @@
-[gd_scene load_steps=51 format=3 uid="uid://calqd06tsqpg7"]
+[gd_scene load_steps=52 format=3 uid="uid://calqd06tsqpg7"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
-[ext_resource type="Texture2D" uid="uid://57juj8vm3t3q" path="res://res/tiles/LVL1/pc.png" id="3_uarom"]
-[ext_resource type="Texture2D" uid="uid://dx8jyv5qragja" path="res://res/tiles/LVL1/paint.png" id="4_hm0f3"]
+[ext_resource type="Texture2D" uid="uid://c8yc62ilepusa" path="res://res/tiles/LVL1/pc.png" id="3_uarom"]
+[ext_resource type="Texture2D" uid="uid://bkc2ht2377xis" path="res://res/tiles/LVL1/paint.png" id="4_hm0f3"]
 [ext_resource type="Texture2D" uid="uid://071io0tu7phl" path="res://res/tiles/LVL1/round window.png" id="5_fidgt"]
-[ext_resource type="Texture2D" uid="uid://qwi71wb63o1n" path="res://res/tiles/LVL1/shower.png" id="6_moy7v"]
-[ext_resource type="Texture2D" uid="uid://baaqt3u34ycrn" path="res://res/tiles/LVL1/sink.png" id="7_f6mxj"]
+[ext_resource type="Texture2D" uid="uid://bj7y12g4e2os" path="res://res/tiles/LVL1/shower.png" id="6_moy7v"]
+[ext_resource type="Texture2D" uid="uid://b23s01lhlhws3" path="res://res/tiles/LVL1/sink.png" id="7_f6mxj"]
 [ext_resource type="Texture2D" uid="uid://cx5fix8yo3xqq" path="res://res/tiles/LVL1/small window.png" id="8_2lrp6"]
 [ext_resource type="Texture2D" uid="uid://cdprrkwnskfsy" path="res://res/tiles/LVL1/stairs.png" id="9_1o48e"]
 [ext_resource type="Texture2D" uid="uid://bkvf6042d1q70" path="res://res/tiles/LVL1/wardrobe.png" id="11_xbrqe"]
-[ext_resource type="Texture2D" uid="uid://cemgj4iw3aq74" path="res://res/tiles/LVL1/wc.png" id="12_0y1oi"]
+[ext_resource type="Texture2D" uid="uid://c6c3rjd1vae56" path="res://res/tiles/LVL1/wc.png" id="12_0y1oi"]
 [ext_resource type="Texture2D" uid="uid://48ffd7sj2il2" path="res://res/tiles/LVL1/interior wall.png" id="14_svsvd"]
 [ext_resource type="Texture2D" uid="uid://bu6tmx3hlai50" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_3uxb1"]
 [ext_resource type="Texture2D" uid="uid://b3f7il17bbyuu" path="res://res/sprites/interior free.png" id="16_dyhxm"]
@@ -18,13 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://wpune8vr8vy0" path="res://res/sprites/DarkHouseTiles.png" id="17_m0nje"]
 [ext_resource type="Texture2D" uid="uid://b6iyytafegy4r" path="res://res/tiles/LVL1/key.png" id="19_v8bnx"]
 [ext_resource type="Texture2D" uid="uid://oampn7tvec7a" path="res://res/tiles/LVL1/kitchen.png" id="20_5c4ia"]
-[ext_resource type="Texture2D" uid="uid://dp2fd0dfkadrd" path="res://res/tiles/LVL1/mirror.png" id="21_p70g1"]
+[ext_resource type="Texture2D" uid="uid://cv3iplj8sxuf" path="res://res/tiles/LVL1/mirror.png" id="21_p70g1"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="22_o5wat"]
 [ext_resource type="Texture2D" uid="uid://8x8b125ryy3j" path="res://res/tiles/LVL1/nightstand.png" id="22_taor0"]
 [ext_resource type="Script" path="res://scripts/alarm_switch.gd" id="23_5mxgw"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="23_ywuix"]
 [ext_resource type="Texture2D" uid="uid://cga2bc1mq3500" path="res://res/tiles/LVL3/alarm_switch_opened.png" id="24_1lmx1"]
-[ext_resource type="Material" uid="uid://80gymh54kuo2" path="res://res/shaders/interactable_material.tres" id="24_8lprs"]
+[ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="24_6jih5"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="24_xe8dw"]
 [ext_resource type="PackedScene" uid="uid://b3sk8txkr6awm" path="res://scenes/BreakingPlatform.tscn" id="25_hj6cf"]
 [ext_resource type="PackedScene" uid="uid://cehjo6dkl4pi0" path="res://scenes/invisible_dialogue.tscn" id="28_ydgn6"]
@@ -10301,6 +10301,12 @@ sources/0 = SubResource("TileSetAtlasSource_t4ilp")
 sources/23 = SubResource("TileSetAtlasSource_m1ld5")
 sources/25 = SubResource("TileSetAtlasSource_h52s1")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hw82q"]
+resource_local_to_scene = true
+shader = ExtResource("24_6jih5")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(1, 1, 0, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_780sm"]
 size = Vector2(29, 30)
 
@@ -10310,10 +10316,10 @@ size = Vector2(29, 30)
 position = Vector2(202, -3)
 tile_set = SubResource("TileSet_e02mx")
 format = 2
-layer_0/tile_data = PackedInt32Array(-393236, 65561, 0, -393237, 65561, 0, -393235, 65561, 0, -917523, 65561, 2, -917524, 65561, 2, -917525, 65561, 2, -917526, 65561, 2, -917522, 65561, 2, -917527, 65561, 2, -917528, 262169, 0, -393238, 65561, 0, -393239, 65561, 0, -393240, 262169, 1, -851992, 131097, 1, -786456, 131097, 1, -720920, 131097, 1, -655384, 131097, 1, -589848, 131097, 1, -524312, 131097, 1, -458776, 131097, 1, -393234, 65561, 0, -393233, 65561, 0, -393232, 65561, 0, -393231, 65561, 0, -393230, 65561, 0, -393229, 65561, 0, -393228, 65561, 0, -393227, 65561, 0, -917521, 65561, 2, -917520, 65561, 2, -917519, 65561, 2, -917518, 65561, 2, -917517, 65561, 2, -917516, 65561, 2, -917515, 196633, 0, -851979, 196633, 1, -786443, 196633, 1, -720907, 196633, 1, -655371, 196633, 1, -589835, 196633, 2)
+layer_0/tile_data = PackedInt32Array(-393236, 65561, 0, -393235, 65561, 0, -917523, 65561, 2, -917524, 65561, 2, -917525, 65561, 2, -917526, 65561, 2, -917522, 65561, 2, -917527, 65561, 2, -917528, 262169, 0, -851992, 131097, 1, -720920, 131097, 1, -655384, 131097, 1, -458776, 131097, 1, -393234, 65561, 0, -393233, 65561, 0, -393232, 65561, 0, -393231, 65561, 0, -393230, 65561, 0, -393229, 65561, 0, -393228, 65561, 0, -393227, 65561, 0, -917521, 65561, 2, -917520, 65561, 2, -917519, 65561, 2, -917518, 65561, 2, -917517, 65561, 2, -917516, 65561, 2, -917515, 196633, 0, -851979, 196633, 1, -786443, 196633, 1, -720907, 196633, 1, -655371, 196633, 1, -589835, 196633, 2, -393240, 262169, 1, -393239, 65561, 0, -393238, 65561, 0, -393237, 65561, 0, -786457, 131097, 1, -524313, 131097, 1, -589849, 131097, 1, -917514, 65561, 2, -917513, 65561, 2, -917512, 65561, 2, -917511, 65561, 2, -917510, 65561, 2, -917509, 65561, 2, -917508, 65561, 2, -917507, 65561, 2, -917506, 65561, 2, -917505, 65561, 2, -983040, 65561, 2, -983039, 65561, 2, -983038, 65561, 2, -983037, 65561, 2, -393226, 65561, 0, -393225, 65561, 0, -393224, 65561, 0, -393223, 65561, 0, -393222, 65561, 0, -393221, 65561, 0, -393220, 65561, 0, -393219, 65561, 0, -393218, 65561, 0, -393217, 65561, 0, -458752, 65561, 0, -458751, 65561, 0, -458750, 65561, 0, -458749, 65561, 0, -458748, 65561, 0, -458747, 65561, 0, -458746, 65561, 0, -458745, 65561, 0, -458744, 65561, 0, -458743, 65561, 0, -983036, 65561, 2, -983035, 65561, 2, -983034, 65561, 2, -983033, 65561, 2, -983032, 65561, 2, -983031, 65561, 2, -983030, 65561, 2, -983029, 65561, 2, -983028, 65561, 2, -983027, 196633, 0, -917491, 196633, 1, -851955, 196633, 1, -786419, 196633, 1, -720883, 196633, 1, -655347, 196633, 2, -458742, 65561, 0, -458741, 65561, 0, -458740, 65561, 0, -458739, 65561, 0)
 
 [node name="Player" parent="." instance=ExtResource("23_ywuix")]
-position = Vector2(-155, -132)
+position = Vector2(68, -155)
 climb_speed = 100.0
 is_in_pijamas = false
 metadata/_edit_group_ = true
@@ -10326,6 +10332,7 @@ position = Vector2(31, -25)
 [node name="Interactables" type="Node" parent="."]
 
 [node name="Polizei" type="Area2D" parent="Interactables"]
+position = Vector2(-40, -13)
 
 [node name="Doors" type="Node" parent="."]
 
@@ -10341,16 +10348,25 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("23_5mxgw")
 door_to_open = NodePath("../FirstDoor")
+dialog_json = "res://dialogues/JSON/Level3.json"
+dialog_key = "police_no_light"
 skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/Interactable"]
-material = ExtResource("24_8lprs")
+material = SubResource("ShaderMaterial_hw82q")
+position = Vector2(-10.724, 9.336)
+scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
 
 [node name="AlarmSwitchShape" type="CollisionShape2D" parent="Doors/Interactable"]
-position = Vector2(0.0419998, 0)
-scale = Vector2(1, 0.966522)
+position = Vector2(-10.724, 9.336)
+scale = Vector2(0.483, 0.483)
 shape = SubResource("RectangleShape2D_780sm")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Doors/Interactable"]
+visible = false
+position = Vector2(50, 150)
+color = Color(0.364706, 0.501961, 0.835294, 1)
 
 [node name="CameraFoci" type="Node" parent="."]
 
@@ -10360,12 +10376,49 @@ position = Vector2(-70, -170)
 width_in_tiles = 14
 height_in_tiles = 9
 
-[node name="BreakingPlatform" parent="." instance=ExtResource("25_hj6cf")]
-position = Vector2(-89, -126)
+[node name="SecondRoom" parent="CameraFoci" instance=ExtResource("24_xe8dw")]
+visible = false
+position = Vector2(228, -171)
+width_in_tiles = 24
+height_in_tiles = 9
 
-[node name="InvisibleDialogue" parent="." instance=ExtResource("28_ydgn6")]
+[node name="InvisivleDialogue" type="Node" parent="."]
+
+[node name="Police_first" parent="InvisivleDialogue" instance=ExtResource("28_ydgn6")]
 position = Vector2(-124, -128)
 collision_layer = 0
 collision_mask = 2
 dialog_json = "res://dialogues/JSON/Level3.json"
-dialog_key = "police"
+dialog_key = "police_first"
+
+[node name="InvisibleDialogue" parent="InvisivleDialogue" instance=ExtResource("28_ydgn6")]
+position = Vector2(103, -193)
+collision_layer = 0
+collision_mask = 2
+dialog_json = "res://dialogues/JSON/Level3.json"
+dialog_key = "police_present"
+
+[node name="BreakingPlatforms" type="Node" parent="."]
+
+[node name="BreakingPlatform" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(103, -134)
+
+[node name="BreakingPlatform2" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(136, -162)
+
+[node name="BreakingPlatform3" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(176, -161)
+
+[node name="BreakingPlatform4" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(220, -162)
+
+[node name="BreakingPlatform5" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(267, -161)
+
+[node name="BreakingPlatform6" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(313, -162)
+
+[node name="BreakingPlatform7" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
+position = Vector2(352, -132)
+
+[node name="Enemy" type="Node" parent="."]
