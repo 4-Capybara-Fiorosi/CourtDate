@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc1sf7h4qvyds"]
+
+[ext_resource type="Script" path="res://scripts/alarm_switch.gd" id="1_j8xrs"]
+[ext_resource type="Material" uid="uid://80gymh54kuo2" path="res://res/shaders/interactable_material.tres" id="2_w0wuj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hryqo"]
+load_path = "res://.godot/imported/alarm_switch_opened.png-f9345c01205de6333624619793dcd00a.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3stk6"]
+size = Vector2(32, 32)
+
+[node name="AlarmSwitch" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_j8xrs")
+skin_path = NodePath("Skin")
+
+[node name="Skin" type="Sprite2D" parent="."]
+material = ExtResource("2_w0wuj")
+use_parent_material = true
+texture = SubResource("CompressedTexture2D_hryqo")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+material = ExtResource("2_w0wuj")
+use_parent_material = true
+shape = SubResource("RectangleShape2D_3stk6")
