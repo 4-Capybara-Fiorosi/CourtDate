@@ -1,9 +1,10 @@
 @tool
 extends Sprite2D
 
-@export var leftLightLength = 16 :
+@export var leftLightLength = 16:
 	set(new_value):
 		leftLightLength = new_value
+		print($LeftLight)
 		$LeftLight.polygon[0].x = -leftLightLength
 		$LeftLight.polygon[1].x = -leftLightLength
 		$LeftLight.polygon[2].x = -leftLightLength
