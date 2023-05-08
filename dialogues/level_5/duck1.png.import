@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5f2xiqbfhdq"
-path="res://.godot/imported/lvl 5 bgd.png-65db2cc51b4a5ac264e8bac8293efa4b.ctex"
+uid="uid://deioupyhr6cje"
+path="res://.godot/imported/duck1.png-8204964bc983c17519c13e956661b30d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tiles/LVL5/lvl 5 bgd.png"
-dest_files=["res://.godot/imported/lvl 5 bgd.png-65db2cc51b4a5ac264e8bac8293efa4b.ctex"]
+source_file="res://dialogues/level_5/duck1.png"
+dest_files=["res://.godot/imported/duck1.png-8204964bc983c17519c13e956661b30d.ctex"]
 
 [params]
 

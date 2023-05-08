@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5f2xiqbfhdq"
-path="res://.godot/imported/lvl 5 bgd.png-65db2cc51b4a5ac264e8bac8293efa4b.ctex"
+uid="uid://ntf0cnx7hkm7"
+path="res://.godot/imported/capyracle1.png-71014d10acc9b2440883f9f5b8024de5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tiles/LVL5/lvl 5 bgd.png"
-dest_files=["res://.godot/imported/lvl 5 bgd.png-65db2cc51b4a5ac264e8bac8293efa4b.ctex"]
+source_file="res://dialogues/level_5/capyracle1.png"
+dest_files=["res://.godot/imported/capyracle1.png-71014d10acc9b2440883f9f5b8024de5.ctex"]
 
 [params]
 
