@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bnkhm6fp3db27"]
+[gd_scene load_steps=67 format=3 uid="uid://bnkhm6fp3db27"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://bg5ws8rnwpff1" path="res://res/sprites/jump_outside.png" id="26_6d2xs"]
 [ext_resource type="PackedScene" uid="uid://cehjo6dkl4pi0" path="res://scenes/invisible_dialogue.tscn" id="28_ydgn6"]
 [ext_resource type="Texture2D" uid="uid://s1we7r6yqkbj" path="res://res/tiles/LVL3/level3_decorative.png" id="29_does0"]
+[ext_resource type="Texture2D" uid="uid://cwlkxxro1ve7r" path="res://res/sprites/elevator_anim.png" id="30_kft8i"]
 [ext_resource type="Script" path="res://scripts/InvisibleDialogue.gd" id="35_pmcd8"]
 [ext_resource type="Texture2D" uid="uid://d0ppqfogqrxg2" path="res://dialogues/Police/police_front.png" id="36_4f5tv"]
 
@@ -10328,13 +10329,22 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lurd8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vnl3u"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_46a7i"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
+size = Vector2(60, 58)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sl8k3"]
+resource_local_to_scene = true
+shader = ExtResource("24_6jih5")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(1, 1, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p4ynk"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10437,23 +10447,38 @@ layer_0/tile_data = PackedInt32Array(-786419, 458777, 0, -720883, 458777, 0, -65
 
 [node name="Interactables" type="Node" parent="."]
 
-[node name="DialogInteractable" parent="Interactables" instance=ExtResource("25_vhbtc")]
+[node name="Outside" parent="Interactables" instance=ExtResource("25_vhbtc")]
 z_index = -1
 position = Vector2(-169, -162)
 dialog_json = "res://dialogues/JSON/Level3.json"
 dialog_key = "maybe_die"
 skin_path = NodePath("Sprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/DialogInteractable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Outside"]
 position = Vector2(-5, -9)
 shape = SubResource("RectangleShape2D_wr1lu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Interactables/DialogInteractable"]
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_lurd8")
+material = SubResource("ShaderMaterial_vnl3u")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
+
+[node name="Elevator" parent="Interactables" instance=ExtResource("25_vhbtc")]
+skin_path = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Elevator"]
+position = Vector2(612, -144)
+shape = SubResource("RectangleShape2D_3kxfl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
+z_index = -1
+material = SubResource("ShaderMaterial_sl8k3")
+position = Vector2(612, -144.5)
+scale = Vector2(2, 1.84375)
+texture = ExtResource("30_kft8i")
+hframes = 3
 
 [node name="Doors" type="Node" parent="."]
 
@@ -10475,7 +10500,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/Interactable"]
 z_index = -1
-material = SubResource("ShaderMaterial_46a7i")
+material = SubResource("ShaderMaterial_p4ynk")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
