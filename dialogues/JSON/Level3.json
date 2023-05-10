@@ -1,13 +1,27 @@
-{
+{	
+	"maybe_die" :
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "There is a long way to the first floor."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "Maybe I should end this suffering...."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "...."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "NO!!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "I MUST CATCH MARTIN AND VANESSA!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "For Edwarda...."}
+	],
 	"police_catch" :
 	[
-		{"Name": "Police", "Action" : "res://dialogues/Police/police_front.png", "Text" : "Freeze! You are under arrest!."},
+		{"Name": "Police", "Action" : "res://dialogues/Police/police_front.png", "Text" : "Freeze! You are under arrest!"},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "Please. I am innocent!"},
+	],
+	"first_enter":
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "I can not believe I have escaped the police. They need to try harder to catch me!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I need to get to the Martin's computer to the top floor! Maybe I can find some evidence!"},
 	],
 	"police_first" : 
 	[
 		{"Name": "Police", "Action" : "res://dialogues/Police/police_normal.png", "Text" : "We saw him enter the building. We will capture him."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "They are here. I need to get to the top floor to get the evidence."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "Of course they are here!"},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "If I have close the lights, I can infiltrate better. "}
 	],
 	"police_no_light":
@@ -17,7 +31,9 @@
 	],
 	"police_present":
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/Police/MCSurprised.png", "Text" : "Oh no! There is a cop. Hold on"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cop. I must be careful"},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "He must not see him, otherwise I will go to jail."},
+		{"Name": "Police", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Maybe these platforms can help. I think if I step on them, they will be destroyed"},
+		{"Name": "Police", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "So I must hurry!"}
 	]
 }
