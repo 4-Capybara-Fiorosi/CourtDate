@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://26yqdd2a6t0g"]
+
+[ext_resource type="Script" path="res://scripts/NextScene.gd" id="1_7m7pi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rolss"]
+size = Vector2(16, 16)
+
+[node name="NextScene" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_7m7pi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rolss")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
