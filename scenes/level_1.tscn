@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://bvs1u3gdj8oqt"]
 
 [ext_resource type="Texture2D" uid="uid://bmv3i1lvuv44k" path="res://res/tiles/LVL1/level1_tiles.png" id="1_0mawu"]
-[ext_resource type="Texture2D" uid="uid://p11ixqqt3wt8" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
+[ext_resource type="Texture2D" uid="uid://ckso3hc2sgu58" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
 [ext_resource type="Texture2D" uid="uid://bmjrr8raq58s2" path="res://res/tiles/LVL1/lvl1_kitchen.png" id="2_jkul4"]
 [ext_resource type="Texture2D" uid="uid://x3t466c5rvhr" path="res://res/tiles/LVL1/level1_furniture.png" id="3_65ei4"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="3_lygs1"]
@@ -227,13 +227,13 @@ sources/27 = SubResource("TileSetAtlasSource_ykdts")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
 size = Vector2(16, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj2dt"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gtfvh"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7esh5"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u41nt"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
@@ -301,7 +301,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_531bf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
-material = SubResource("ShaderMaterial_bj2dt")
+material = SubResource("ShaderMaterial_gtfvh")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(6, 49, 18, 19)
@@ -316,7 +316,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Computer"]
 z_index = -1
-material = SubResource("ShaderMaterial_7esh5")
+material = SubResource("ShaderMaterial_u41nt")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(48, 97, 34, 31)
@@ -466,10 +466,6 @@ position = Vector2(128, 227)
 
 [node name="Player" parent="." instance=ExtResource("3_lygs1")]
 position = Vector2(133, 5)
-climb_speed = null
-jump_height = null
-coyote_time_seconds = null
-jump_queue_time = null
 metadata/_edit_group_ = true
 
 [node name="NextScene" parent="." instance=ExtResource("18_weehl")]

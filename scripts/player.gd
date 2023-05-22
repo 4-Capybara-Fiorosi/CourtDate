@@ -119,16 +119,12 @@ func _get_vertical_movement_direciton() -> float:
 	return Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
 
-func focus_camera(top: float, right: float, bot: float, left: float) -> void:
+func focus_camera(top: float, right: float, bot: float, left: float, zoom: Vector2) -> void:
 	$Camera2D.limit_top = top
 	$Camera2D.limit_right = right
 	$Camera2D.limit_bottom = bot
 	$Camera2D.limit_left = left
-	const window_size := Vector2(320, 320)
-	var zoom_x :float = abs(left - right) / window_size.x
-	var zoom_y :float = abs(top - bot) / window_size.y
-	var zoom = 1 / min(zoom_x, zoom_y)
-	$Camera2D.zoom = Vector2(zoom, zoom)
+	$Camera2D.zoom = zoom
 
 
 func _on_ladder_enter(_body):
