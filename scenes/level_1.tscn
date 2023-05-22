@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://bvs1u3gdj8oqt"]
 
 [ext_resource type="Texture2D" uid="uid://bmv3i1lvuv44k" path="res://res/tiles/LVL1/level1_tiles.png" id="1_0mawu"]
-[ext_resource type="Texture2D" uid="uid://ckso3hc2sgu58" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
+[ext_resource type="Texture2D" uid="uid://p11ixqqt3wt8" path="res://res/tiles/LVL1/level1_background1_bedroom.png" id="1_syxei"]
 [ext_resource type="Texture2D" uid="uid://bmjrr8raq58s2" path="res://res/tiles/LVL1/lvl1_kitchen.png" id="2_jkul4"]
 [ext_resource type="Texture2D" uid="uid://x3t466c5rvhr" path="res://res/tiles/LVL1/level1_furniture.png" id="3_65ei4"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="3_lygs1"]
@@ -226,13 +226,13 @@ sources/27 = SubResource("TileSetAtlasSource_ykdts")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
 size = Vector2(16, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ty7tm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_14kb6"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iuaoi"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ju66m"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
@@ -300,27 +300,27 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_531bf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
-material = SubResource("ShaderMaterial_ty7tm")
+material = SubResource("ShaderMaterial_14kb6")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(6, 49, 18, 19)
 
-[node name="DialogInteractable" parent="Iteractables" instance=ExtResource("17_aogit")]
-position = Vector2(19, -133)
+[node name="Computer" parent="Iteractables" instance=ExtResource("17_aogit")]
+position = Vector2(28, -137)
 scale = Vector2(0.5, 0.5)
 dialog_json = "res://dialogues/JSON/Level1.json"
 dialog_key = "computer"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Iteractables/DialogInteractable"]
+[node name="Sprite2D" type="Sprite2D" parent="Iteractables/Computer"]
 z_index = -1
-material = SubResource("ShaderMaterial_iuaoi")
+material = SubResource("ShaderMaterial_ju66m")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(48, 97, 34, 31)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Iteractables/DialogInteractable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Iteractables/Computer"]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_l0sd7")
 
@@ -365,7 +365,7 @@ height_in_tiles = 6
 [node name="Office" parent="CameraFoci" instance=ExtResource("4_gn37q")]
 visible = false
 position = Vector2(40, -151)
-width_in_tiles = 15
+width_in_tiles = 16
 height_in_tiles = 6
 
 [node name="Bathroom" parent="CameraFoci" instance=ExtResource("4_gn37q")]
@@ -404,7 +404,7 @@ the bathroom?"
 
 [node name="CapyKey2" parent="Doors" instance=ExtResource("7_kmbnu")]
 z_index = -1
-position = Vector2(485, -131)
+position = Vector2(408, -164)
 door_to_open = NodePath("../DoorVanessasOffice")
 
 [node name="DoorExit" parent="Doors" instance=ExtResource("6_gyns0")]
@@ -415,7 +415,7 @@ in the office."
 
 [node name="CapyKey3" parent="Doors" instance=ExtResource("7_kmbnu")]
 z_index = -1
-position = Vector2(-55, -129)
+position = Vector2(-64, -150)
 door_to_open = NodePath("../DoorExit")
 
 [node name="KitchenEntrance" parent="Doors" instance=ExtResource("6_gyns0")]
@@ -464,7 +464,7 @@ position = Vector2(38, 148)
 position = Vector2(128, 227)
 
 [node name="Player" parent="." instance=ExtResource("3_lygs1")]
-position = Vector2(143, 4)
+position = Vector2(133, 5)
 climb_speed = null
 jump_height = null
 coyote_time_seconds = null
