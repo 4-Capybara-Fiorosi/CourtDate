@@ -16,8 +16,9 @@ var dialog_dict :Dictionary;
 
 var dialog_key :String;
 @export var text_speed := 0.05;
-
 @onready var dialog_manager_scene :PackedScene = preload("res://scenes/DialogBox.tscn");
+@export var on_dialog_finished :Script = null;
+@export var destroy_when_finished :bool = true;
 
 func _get_property_list():
 	var property_usage = PROPERTY_USAGE_NO_EDITOR
@@ -52,6 +53,8 @@ func _on_body_entered(body):
 	box.dialog_dict = dialog_dict;
 	box.textSpeed = self.text_speed;
 	box.keyString = self.dialog_key;
+	box.on_dialog_finished = self.on_dialog_finished;
 	dialog_supervisor.dialog_finished.connect(player.unpause)
 	player.add_child(dialog_supervisor)
-	queue_free()
+	if destroy_when_finished:
+		queue_free()

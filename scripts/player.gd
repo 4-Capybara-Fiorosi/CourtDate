@@ -42,13 +42,16 @@ var can_interact := true;
 func pause():
 	is_paused = true;
 	can_interact = false;
+	get_tree().paused = true
 
 
-func unpause():
+func unpause(on_dialog_finished: Script):
 	is_paused = false;
-	get_tree().create_timer(1.0).timeout.connect(func():
+	get_tree().create_timer(5.0).timeout.connect(func():
 		self.can_interact = true; );
-
+	get_tree().paused = false
+	if on_dialog_finished != null:
+		on_dialog_finished.new().run(self)
 
 func _physics_process(delta :float):
 	if is_paused:

@@ -5,6 +5,8 @@ extends TextureRect
 @export var textSpeed := 0.05;
 @export var keyString :String;
 
+@export var on_dialog_finished : Script = null; 
+
 var dialog: Array;
 
 var phraseNum :int = 0;
@@ -33,7 +35,7 @@ func _input(event):
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		get_parent().queue_free()
-		(get_parent() as DialogSupervisor).dialog_finished.emit()
+		(get_parent() as DialogSupervisor).dialog_finished.emit(on_dialog_finished)
 		return
 	finished = false
 	isKeyPressed = true

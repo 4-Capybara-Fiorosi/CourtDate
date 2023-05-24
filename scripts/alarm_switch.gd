@@ -19,8 +19,7 @@ func interact(_player: PlayerCharacter):
 	dialog_supervisor.dialog_finished.connect(_player.unpause)
 	_player.add_child(dialog_supervisor)
 	$AlarmSwitch.texture = closedSwitch
-	$AlarmSwitchShape.visible = false
-	$CanvasModulate.visible = true
+	$Darkness.visible = true
 
 @export_file("*.json") var dialog_json = "":
 	set(new_value):
