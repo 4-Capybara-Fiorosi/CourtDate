@@ -18242,31 +18242,31 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iwbu0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jw2un"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ipnb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kv63s"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_04esq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2g02h"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p2fjo"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4r82u"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u0jq7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1buvc"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
@@ -18299,7 +18299,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Sister"]
-material = SubResource("ShaderMaterial_iwbu0")
+material = SubResource("ShaderMaterial_jw2un")
 position = Vector2(2, -1)
 texture = ExtResource("10_utl1w")
 
@@ -18318,7 +18318,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Judge"]
-material = SubResource("ShaderMaterial_5ipnb")
+material = SubResource("ShaderMaterial_kv63s")
 position = Vector2(3, 1)
 scale = Vector2(1.03125, 1)
 texture = ExtResource("11_y0yor")
@@ -18339,7 +18339,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Martin"]
-material = SubResource("ShaderMaterial_04esq")
+material = SubResource("ShaderMaterial_2g02h")
 position = Vector2(0, -1)
 texture = ExtResource("12_qq7ha")
 
@@ -18360,7 +18360,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Knife"]
-material = SubResource("ShaderMaterial_p2fjo")
+material = SubResource("ShaderMaterial_4r82u")
 position = Vector2(6, 5)
 texture = ExtResource("13_3m5rr")
 
@@ -18379,7 +18379,7 @@ position = Vector2(-2, 6)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Vanessa"]
-material = SubResource("ShaderMaterial_u0jq7")
+material = SubResource("ShaderMaterial_1buvc")
 position = Vector2(-2, 22)
 texture = ExtResource("13_swo2r")
 

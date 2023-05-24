@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c6rigxs76iv5q"]
+[gd_scene load_steps=35 format=3 uid="uid://c6rigxs76iv5q"]
 
 [ext_resource type="Texture2D" uid="uid://ktww1amcujem" path="res://res/sprites/groundFloor.png" id="1_exoll"]
 [ext_resource type="Texture2D" uid="uid://casas4ceqn84k" path="res://res/sprites/level2_tiles.png" id="2_4bf04"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvfd2qoyf7yn" path="res://scenes/menu.tscn" id="17_5b0bo"]
 [ext_resource type="Script" path="res://scripts/SFXPlayer.gd" id="18_11gk3"]
 [ext_resource type="AudioStream" uid="uid://bigm4bcl1wa7e" path="res://res/music/level2.mp3" id="19_c75xi"]
+[ext_resource type="PackedScene" path="res://scenes/next_scene.tscn" id="20_xea2s"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="23_550gs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nac5c"]
@@ -7886,7 +7887,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xl6h8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vom5u"]
 resource_local_to_scene = true
 shader = ExtResource("15_nsas5")
 shader_parameter/width = 0.0
@@ -7970,7 +7971,7 @@ position = Vector2(-5.5, -4.5)
 shape = SubResource("RectangleShape2D_y20p6")
 
 [node name="Player" parent="." instance=ExtResource("23_550gs")]
-position = Vector2(-391, -366)
+position = Vector2(-421, -354)
 is_in_pijamas = false
 metadata/_edit_group_ = true
 
@@ -7987,8 +7988,8 @@ jump_height = 80.0
 [node name="DoorExit" parent="Doors" instance=ExtResource("10_osg2f")]
 position = Vector2(276, -608)
 notification_position = 1
-notification = "We keep this one
-in the office."
+notification = "Next to the
+lava pool.dddddddddddddddddddddddddddddddddddddddddddddddddddddd"
 
 [node name="CapyKey3" parent="Doors" instance=ExtResource("11_pg8og")]
 z_index = -1
@@ -8029,13 +8030,14 @@ position = Vector2(-80, -607)
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("14_1v73b")
-dialog_json = "res://dialogues/JSON/Level1.json"
-dialog_key = "newspaper"
+dialog_json = "res://dialogues/JSON/Level2.json"
+dialog_key = "auntie"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Auntie"]
-material = SubResource("ShaderMaterial_xl6h8")
+z_index = -1
+material = SubResource("ShaderMaterial_vom5u")
 texture = ExtResource("15_u16dg")
 region_enabled = true
 region_rect = Rect2(1, 2, 22, 30)
@@ -8055,3 +8057,7 @@ script = ExtResource("18_11gk3")
 process_mode = 3
 stream = ExtResource("19_c75xi")
 volume_db = -36.174
+
+[node name="NextScene" parent="." instance=ExtResource("20_xea2s")]
+position = Vector2(353, -736)
+next_scene = "res://scenes/level_3.tscn"

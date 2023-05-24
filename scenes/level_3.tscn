@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://bnkhm6fp3db27"]
+[gd_scene load_steps=88 format=3 uid="uid://bnkhm6fp3db27"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
@@ -10371,7 +10371,7 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i8tpx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mugga"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10380,13 +10380,13 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mb4n8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fuj7w"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q4iy7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_816bi"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10395,7 +10395,7 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rkpw"]
 size = Vector2(32, 29)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6txay"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qgck"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10421,14 +10421,6 @@ animations = [{
 "name": &"walk",
 "speed": 5.0
 }]
-
-[sub_resource type="GDScript" id="GDScript_lhbjf"]
-script/source = "
-
-
-func run(player: PlayerCharacter):
-	player.die()
-"
 
 [sub_resource type="Curve2D" id="Curve2D_f3lx1"]
 _data = {
@@ -10596,9 +10588,12 @@ layer_0/tile_data = PackedInt32Array(-786419, 458777, 0, -720883, 458777, 0, -65
 
 [node name="Interactables" type="Node" parent="."]
 
-[node name="Outside" parent="Interactables" instance=ExtResource("25_vhbtc")]
+[node name="Outside" type="Area2D" parent="Interactables"]
 z_index = -1
 position = Vector2(-169, -162)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("32_olxly")
 dialog_json = "res://dialogues/JSON/Level3.json"
 dialog_key = "maybe_die"
 skin_path = NodePath("Sprite2D")
@@ -10610,7 +10605,7 @@ shape = SubResource("RectangleShape2D_wr1lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_i8tpx")
+material = SubResource("ShaderMaterial_mugga")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
@@ -10628,7 +10623,7 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_mb4n8")
+material = SubResource("ShaderMaterial_fuj7w")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
@@ -10640,12 +10635,13 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("32_olxly")
 dialog_json = "res://dialogues/JSON/Level3.json"
+sound = "res://res/music/computer.mp3"
 dialog_key = "evidence"
 skin_path = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/DialogInteractible"]
 z_index = -1
-material = SubResource("ShaderMaterial_q4iy7")
+material = SubResource("ShaderMaterial_816bi")
 texture = ExtResource("35_ko2tm")
 region_enabled = true
 region_rect = Rect2(48, 96.7429, 34, 31.5124)
@@ -10674,7 +10670,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/FireAlarm"]
 z_index = -1
-material = SubResource("ShaderMaterial_6txay")
+material = SubResource("ShaderMaterial_3qgck")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
@@ -10844,10 +10840,6 @@ texture_scale = 0.5
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("35_pmcd8")
-dialog_json = "res://dialogues/JSON/Level3.json"
-on_dialog_finished = SubResource("GDScript_lhbjf")
-destroy_when_finished = false
-dialog_key = "police_catch"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemy/Path2D/PathFollow2D/InvisibleDialogue"]
 position = Vector2(10, 10)
@@ -10884,10 +10876,6 @@ texture_scale = 0.5
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("35_pmcd8")
-dialog_json = "res://dialogues/JSON/Level3.json"
-on_dialog_finished = SubResource("GDScript_lhbjf")
-destroy_when_finished = false
-dialog_key = "police_catch"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemy/Path2D2/PathFollow2D/InvisibleDialogue"]
 position = Vector2(10, 10)
@@ -10924,10 +10912,6 @@ texture_scale = 0.5
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("35_pmcd8")
-dialog_json = "res://dialogues/JSON/Level3.json"
-on_dialog_finished = SubResource("GDScript_lhbjf")
-destroy_when_finished = false
-dialog_key = "police_catch"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemy/Path2D3/PathFollow2D/InvisibleDialogue"]
 position = Vector2(10, 10)

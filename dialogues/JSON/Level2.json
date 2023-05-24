@@ -1,0 +1,11 @@
+{
+	"auntie" : 
+	[
+		{"Name": "Mom", "Action" : "res://res/tiles/auntie.png", "Text" : "You killed her!!!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Mom!! It's not true!!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "Who told you that?!"},
+		{"Name": "Mom", "Action" : "res://res/tiles/auntie.png", "Text" : "I spoke with Martin. He told me everything!!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "He's lying!! You must belive me!! We are family!!"},
+		{"Name": "Mom", "Action" : "res://res/tiles/auntie.png", "Text" : "We WERE a family!! Mr. Policeman!! He's here!!"},
+	],
+}
