@@ -1,6 +1,6 @@
 @tool
 extends Interactable
-class_name DialogInteractible
+
 @export var door_to_open: NodePath
 
 var closedSwitch = preload("res://res/tiles/LVL3/alarn_switch_closed.png")
