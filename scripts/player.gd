@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var friction :float = 0.1
 ## Ladder climbing speed in px/s
 @export var climb_speed :float = 2
+## keycard for the police level
+@export var mustHaveKeyCard :bool = false
 
 ## Jump Height in pixels
 @export var jump_height :float = 32
