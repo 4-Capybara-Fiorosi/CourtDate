@@ -7886,7 +7886,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3x1os"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xl6h8"]
 resource_local_to_scene = true
 shader = ExtResource("15_nsas5")
 shader_parameter/width = 0.0
@@ -8035,7 +8035,7 @@ skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Auntie"]
-material = SubResource("ShaderMaterial_3x1os")
+material = SubResource("ShaderMaterial_xl6h8")
 texture = ExtResource("15_u16dg")
 region_enabled = true
 region_rect = Rect2(1, 2, 22, 30)

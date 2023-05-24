@@ -18231,13 +18231,13 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8r6x"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i34bn"]
 resource_local_to_scene = true
 shader = ExtResource("9_8t7r1")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_is1iy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s1spu"]
 resource_local_to_scene = true
 shader = ExtResource("9_8t7r1")
 shader_parameter/width = 0.0
@@ -18278,7 +18278,6 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_txruy")
 dialog_json = "res://dialogues/JSON/Level5.json"
-sound = null
 dialog_key = "duck"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_lock_ = true
@@ -18289,7 +18288,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Duck"]
-material = SubResource("ShaderMaterial_e8r6x")
+material = SubResource("ShaderMaterial_i34bn")
 position = Vector2(6, 5)
 texture = ExtResource("5_ljokr")
 
@@ -18299,12 +18298,11 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_txruy")
 dialog_json = "res://dialogues/JSON/Level5.json"
-sound = null
 dialog_key = "capyracle"
 skin_path = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Capyracle"]
-material = SubResource("ShaderMaterial_is1iy")
+material = SubResource("ShaderMaterial_s1spu")
 position = Vector2(5, -6)
 texture = ExtResource("10_41pfe")
 region_enabled = true
