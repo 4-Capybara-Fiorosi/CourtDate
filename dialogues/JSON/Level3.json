@@ -32,18 +32,18 @@
 	"police_present":
 	[
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cop. I must be careful"},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "He must not see him, otherwise I will go to jail."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "He must not see me, otherwise I will go to jail."},
 		{"Name": "Police", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Maybe these platforms can help. I think if I step on them, they will be destroyed"},
 		{"Name": "Police", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "So I must hurry!"}
 	],
 	"elevator_no_key":
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "I need the keycard! I need to go to my office."},	
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "Also, I need to hide from the police."}	
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I can use the elevator"},	
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "What? Elevator is broken? Damn you, Martin"}	
 	],
 	"first_ninja":
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cup. I need to go behind the cop"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cop. I need to go behind the cop"},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "I need to activate my Ninja skills."}
 	],
 	"exit_ninja":
@@ -51,11 +51,17 @@
 		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "Blind cop. I am the best ninja ever!"},
 		{"Name": "Police", "Action" : "res://dialogues/Police/police_front.png", "Text" : "Zzzzzz....."},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Oh... He was sleeping...."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "How is he sleeping standing up?! Useless cops?!"}
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "How is he sleeping standing up?! Useless cops!"}
 	],
-	"keycard":
+	"evidence":
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I found the keycard. I need to go back to the elevator."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "But I need to use my ninja skills to escape the cops."}
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Ok. This is his computer. Lucky me, it is not locked. Let's see...."},
+		{"Name": "Martin", "Action" : "res://dialogues/Martin/MartinNormal.png", "Text" : "Are you sure about this? It is very risky to kill Edwarda..."},
+		{"Name": "Vanessa", "Action" : "res://res/characters/vanessa.png", "Text" : "Don't worry, baby. My brother is very dumb. We will get away and be very rich!"},
+		{"Name": "Martin", "Action" : "res://dialogues/Martin/MartinKiss.png", "Text" : "That's right baby! I love it when you are evil!"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "Gross! How was i married to this woman?"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "These mails are good. I hope they are good enough. I need to go to court."},
+		
+		
 	]
 }
