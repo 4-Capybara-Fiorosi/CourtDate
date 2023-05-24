@@ -21,7 +21,7 @@ var dialog_key :String;
 @export var on_dialog_finished :Script = null;
 @export var destroy_when_finished :bool = false;
 
-@export_file var sound = null;
+@export_file var sound := "";
 @export var sound_duration := 1.0;
 
 func _get_property_list():

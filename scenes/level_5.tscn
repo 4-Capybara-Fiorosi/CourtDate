@@ -18231,13 +18231,13 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s5ehf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8r6x"]
 resource_local_to_scene = true
 shader = ExtResource("9_8t7r1")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wcdbc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_is1iy"]
 resource_local_to_scene = true
 shader = ExtResource("9_8t7r1")
 shader_parameter/width = 0.0
@@ -18278,7 +18278,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_txruy")
 dialog_json = "res://dialogues/JSON/Level5.json"
-sound_duration = null
+sound = null
 dialog_key = "duck"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_lock_ = true
@@ -18289,7 +18289,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Duck"]
-material = SubResource("ShaderMaterial_s5ehf")
+material = SubResource("ShaderMaterial_e8r6x")
 position = Vector2(6, 5)
 texture = ExtResource("5_ljokr")
 
@@ -18299,12 +18299,12 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_txruy")
 dialog_json = "res://dialogues/JSON/Level5.json"
-sound_duration = null
+sound = null
 dialog_key = "capyracle"
 skin_path = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Capyracle"]
-material = SubResource("ShaderMaterial_wcdbc")
+material = SubResource("ShaderMaterial_is1iy")
 position = Vector2(5, -6)
 texture = ExtResource("10_41pfe")
 region_enabled = true
@@ -18483,11 +18483,6 @@ height_in_tiles = 19
 [node name="CameraFocus21" parent="CameraFocus" instance=ExtResource("11_0bke4")]
 position = Vector2(328, -626)
 width_in_tiles = 16
-height_in_tiles = 12
-
-[node name="CameraFocus22" parent="CameraFocus" instance=ExtResource("11_0bke4")]
-position = Vector2(489, -835)
-width_in_tiles = 36
 height_in_tiles = 10
 
 [node name="CameraFocus26" parent="CameraFocus" instance=ExtResource("11_0bke4")]

@@ -10,7 +10,7 @@ func load_mp3(path: String):
 
 
 func play_dynamic(path_to_file: String, duration: float):
-	if path_to_file == null:
+	if path_to_file == "":
 		return;
 	self.stream = load_mp3(path_to_file)
 	self.play()

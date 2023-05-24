@@ -10374,13 +10374,13 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3gck"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aydwe"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4llwc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ucvxt"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10389,7 +10389,7 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7fou"]
 size = Vector2(8, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u0cpw"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4t4j"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10565,13 +10565,6 @@ layer_0/tile_data = PackedInt32Array(-786419, 458777, 0, -720883, 458777, 0, -65
 [node name="Interactables" type="Node" parent="."]
 
 [node name="Outside" parent="Interactables" instance=ExtResource("25_vhbtc")]
-z_index = -1
-position = Vector2(-163, -158)
-dialog_json = "res://dialogues/JSON/Level3.json"
-sound_duration = null
-dialog_key = "maybe_die"
-skin_path = NodePath("Sprite2D")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Outside"]
 position = Vector2(-5, -9)
@@ -10587,7 +10580,6 @@ texture = ExtResource("26_6d2xs")
 [node name="Elevator" parent="Interactables" instance=ExtResource("25_vhbtc")]
 position = Vector2(0, 4)
 dialog_json = "res://dialogues/JSON/Level3.json"
-sound_duration = null
 dialog_key = "elevator_no_key"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -10598,7 +10590,7 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_h3gck")
+material = SubResource("ShaderMaterial_aydwe")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
@@ -10612,13 +10604,12 @@ collision_mask = 0
 script = ExtResource("32_olxly")
 dialog_json = "res://dialogues/JSON/Level3.json"
 destroy_when_finished = true
-sound_duration = null
 dialog_key = "keycard"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Keycard"]
-material = SubResource("ShaderMaterial_4llwc")
+material = SubResource("ShaderMaterial_ucvxt")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("33_ypf5g")
 
@@ -10645,7 +10636,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/FireAlarm"]
 z_index = -1
-material = SubResource("ShaderMaterial_u0cpw")
+material = SubResource("ShaderMaterial_c4t4j")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")

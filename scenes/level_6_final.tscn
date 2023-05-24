@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bs4rmxua7e5n8"]
+[gd_scene load_steps=36 format=3 uid="uid://bs4rmxua7e5n8"]
 
 [ext_resource type="Texture2D" uid="uid://bu6tmx3hlai50" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="1_tp77f"]
 [ext_resource type="Texture2D" uid="uid://b3f7il17bbyuu" path="res://res/sprites/interior free.png" id="2_2jse3"]
@@ -18,7 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="13_ucqno"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="14_4bnk3"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="15_w211g"]
-[ext_resource type="Texture2D" uid="uid://bhhetu0otjp8j" path="res://res/tiles/LVL 6/lvl6.png" id="18_3wp20"]
+[ext_resource type="Texture2D" uid="uid://d2xvyoq6euwfm" path="res://res/tiles/LVL 6/lvl6.png" id="18_3wp20"]
+[ext_resource type="PackedScene" uid="uid://ckvfd2qoyf7yn" path="res://scenes/menu.tscn" id="20_tcal1"]
+[ext_resource type="Script" path="res://scripts/SFXPlayer.gd" id="21_4lck7"]
+[ext_resource type="AudioStream" uid="uid://bsx5w475qhthv" path="res://res/music/level1.mp3" id="22_eqon7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l64uo"]
 texture = ExtResource("1_tp77f")
@@ -18239,31 +18242,31 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2qsje"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fpc0m"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cb5vl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_os74w"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qk368"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_clmmg"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xmcq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_88kjn"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1sjjb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1jwb4"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
@@ -18287,7 +18290,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-sound_duration = null
+sound = null
 dialog_key = "sister"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18297,7 +18300,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Sister"]
-material = SubResource("ShaderMaterial_2qsje")
+material = SubResource("ShaderMaterial_fpc0m")
 position = Vector2(2, -1)
 texture = ExtResource("10_utl1w")
 
@@ -18308,7 +18311,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-sound_duration = null
+sound = null
 dialog_key = "judge"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18317,7 +18320,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Judge"]
-material = SubResource("ShaderMaterial_cb5vl")
+material = SubResource("ShaderMaterial_os74w")
 position = Vector2(3, 1)
 scale = Vector2(1.03125, 1)
 texture = ExtResource("11_y0yor")
@@ -18329,7 +18332,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-sound_duration = null
+sound = null
 dialog_key = "martin"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18339,7 +18342,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Martin"]
-material = SubResource("ShaderMaterial_qk368")
+material = SubResource("ShaderMaterial_clmmg")
 position = Vector2(0, -1)
 texture = ExtResource("12_qq7ha")
 
@@ -18351,7 +18354,7 @@ collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
 destroy_when_finished = true
-sound_duration = null
+sound = null
 dialog_key = "knife"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18361,7 +18364,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Knife"]
-material = SubResource("ShaderMaterial_5xmcq")
+material = SubResource("ShaderMaterial_88kjn")
 position = Vector2(6, 5)
 texture = ExtResource("13_3m5rr")
 
@@ -18372,7 +18375,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-sound_duration = null
+sound = null
 dialog_key = "vanessa"
 skin_path = NodePath("Sprite2D")
 
@@ -18381,7 +18384,7 @@ position = Vector2(-2, 6)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Vanessa"]
-material = SubResource("ShaderMaterial_1sjjb")
+material = SubResource("ShaderMaterial_1jwb4")
 position = Vector2(-2, 22)
 texture = ExtResource("13_swo2r")
 
@@ -18423,11 +18426,15 @@ exit key first!"
 
 [node name="Door3" parent="Doors" instance=ExtResource("14_4bnk3")]
 position = Vector2(340, -222)
+collision_layer = 0
+start_state = 1
 
 [node name="Door4" parent="Doors" instance=ExtResource("14_4bnk3")]
 position = Vector2(451, -221)
+collision_layer = 0
 notification = "What is this?
 hmm..."
+start_state = 1
 
 [node name="Door5" parent="Doors" instance=ExtResource("14_4bnk3")]
 position = Vector2(520, -302)
@@ -18437,12 +18444,16 @@ a closet!"
 
 [node name="Door6" parent="Doors" instance=ExtResource("14_4bnk3")]
 position = Vector2(286, -302)
+collision_layer = 0
 notification = "How did i get here?"
+start_state = 1
 
 [node name="Door7" parent="Doors" instance=ExtResource("14_4bnk3")]
 position = Vector2(450, -301)
+collision_layer = 0
 notification = "I don't think there
 is something out."
+start_state = 1
 
 [node name="Door8" parent="Doors" instance=ExtResource("14_4bnk3")]
 position = Vector2(324, -446)
@@ -18456,6 +18467,12 @@ door_to_open = NodePath("../Door8")
 [node name="CapyKey3" parent="Doors" instance=ExtResource("13_ucqno")]
 position = Vector2(321, -377)
 door_to_open = NodePath("../Door2")
+
+[node name="Door9" parent="Doors" instance=ExtResource("14_4bnk3")]
+position = Vector2(835, -142)
+collision_layer = 0
+notification_position = 1
+start_state = 1
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -18498,3 +18515,16 @@ height_in_tiles = 8
 position = Vector2(978, -151)
 width_in_tiles = 28
 height_in_tiles = 6
+
+[node name="Menu" parent="." instance=ExtResource("20_tcal1")]
+is_first_level = false
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+volume_db = -18.315
+script = ExtResource("21_4lck7")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("22_eqon7")
+volume_db = -36.174
