@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://dn8ergsa3tmxm"]
+
+[ext_resource type="Script" path="res://scripts/police_npc.gd" id="1_nellu"]
+[ext_resource type="Texture2D" uid="uid://d0ppqfogqrxg2" path="res://dialogues/Police/police_front.png" id="1_stfkh"]
+[ext_resource type="Script" path="res://scripts/InvisibleDialogue.gd" id="2_hc684"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_turnd"]
+size = Vector2(43, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brsrk"]
+size = Vector2(44, 32)
+
+[node name="PoliceSees" type="Node2D"]
+script = ExtResource("1_nellu")
+hasFrontalDirection = false
+
+[node name="skin" type="Sprite2D" parent="."]
+texture = ExtResource("1_stfkh")
+
+[node name="LeftColl" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_hc684")
+dialog_json = "res://dialogues/JSON/Level3.json"
+dialog_key = "police_catch"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftColl"]
+visible = false
+position = Vector2(-32, 0)
+shape = SubResource("RectangleShape2D_turnd")
+
+[node name="LeftPoly" type="Polygon2D" parent="."]
+position = Vector2(11, 4)
+color = Color(1, 1, 0.352941, 0.576471)
+polygon = PackedVector2Array(-64, -20, -38, -20, -21, -20, -21, 12, -64, 12, -64, -4)
+
+[node name="RightPoly" type="Polygon2D" parent="."]
+position = Vector2(65, 4)
+color = Color(1, 1, 0.352941, 0.576471)
+polygon = PackedVector2Array(-54, -20, -38, -20, -10, -20, -10, -4, -10, 12, -54, 12)
+
+[node name="RightCol" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_hc684")
+dialog_json = "res://dialogues/JSON/Level3.json"
+dialog_key = "police_catch"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightCol"]
+visible = false
+position = Vector2(33, 0)
+shape = SubResource("RectangleShape2D_brsrk")
+
+[connection signal="body_entered" from="LeftColl" to="LeftColl" method="_on_body_entered"]
+[connection signal="body_entered" from="RightCol" to="RightCol" method="_on_body_entered"]

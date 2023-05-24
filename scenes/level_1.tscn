@@ -17,7 +17,7 @@
 [ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="7_ou0k3"]
 [ext_resource type="PackedScene" uid="uid://dh34wt4kj0eis" path="res://scenes/accelerator.tscn" id="11_0dfm0"]
 [ext_resource type="PackedScene" uid="uid://dvfs3qd88jgba" path="res://scenes/dialog_interactable.tscn" id="17_aogit"]
-[ext_resource type="PackedScene" uid="uid://26yqdd2a6t0g" path="res://scenes/next_scene.tscn" id="18_weehl"]
+[ext_resource type="PackedScene" path="res://scenes/next_scene.tscn" id="18_weehl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ie4h"]
 texture = ExtResource("1_0mawu")
@@ -227,13 +227,13 @@ sources/27 = SubResource("TileSetAtlasSource_ykdts")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
 size = Vector2(16, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_68mf8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wkuf1"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_otbsg"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2fwpt"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
@@ -301,7 +301,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_531bf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
-material = SubResource("ShaderMaterial_68mf8")
+material = SubResource("ShaderMaterial_wkuf1")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(6, 49, 18, 19)
@@ -316,7 +316,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Computer"]
 z_index = -1
-material = SubResource("ShaderMaterial_otbsg")
+material = SubResource("ShaderMaterial_2fwpt")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(48, 97, 34, 31)
