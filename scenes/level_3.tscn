@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bnkhm6fp3db27"]
+[gd_scene load_steps=77 format=3 uid="uid://bnkhm6fp3db27"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
@@ -41,8 +41,8 @@
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="34_md7ik"]
 [ext_resource type="Script" path="res://scripts/InvisibleDialogue.gd" id="35_pmcd8"]
 [ext_resource type="Script" path="res://scripts/path_patrol.gd" id="37_bfejk"]
-[ext_resource type="Texture2D" uid="uid://cxbkldy5xkiax" path="res://res/characters/capyCop.png" id="38_l8paa"]
 [ext_resource type="Texture2D" uid="uid://d3cufmnh4k7vq" path="res://res/lights/flashlight.png" id="40_5v86b"]
+[ext_resource type="Texture2D" uid="uid://kfiahyng2667" path="res://dialogues/Police/police_normal.png" id="40_woghe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4ilp"]
 resource_name = "Bed"
@@ -10363,7 +10363,7 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vwfiv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xu1cu"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10372,13 +10372,13 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nylcm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m1mx6"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mingq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ebxs4"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10390,33 +10390,15 @@ size = Vector2(29, 30)
 [sub_resource type="Curve2D" id="Curve2D_4b6w5"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 181, -126, 0, 0, 0, 0, 249, -126)
+"points": PackedVector2Array(0, 0, 0, 0, 155, -124, 0, 0, 0, 0, 313, -124)
 }
 point_count = 2
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7b6np"]
-atlas = ExtResource("38_l8paa")
-region = Rect2(0, 0, 30, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x4c8h"]
-atlas = ExtResource("38_l8paa")
-region = Rect2(30, 0, 30, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a2v64"]
-atlas = ExtResource("38_l8paa")
-region = Rect2(60, 0, 30, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0qjov"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7b6np")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x4c8h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a2v64")
+"texture": ExtResource("40_woghe")
 }],
 "loop": true,
 "name": &"walk",
@@ -10433,15 +10415,6 @@ func run(player: PlayerCharacter):
 
 [node name="Level3" type="Node2D"]
 position = Vector2(6, 4)
-
-[node name="Player" parent="." instance=ExtResource("23_ywuix")]
-position = Vector2(-153, -137)
-climb_speed = 100.0
-is_in_pijamas = false
-metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(31, -25)
 
 [node name="Background" type="Node2D" parent="."]
 z_index = -1
@@ -10582,10 +10555,11 @@ layer_0/tile_data = PackedInt32Array(-786419, 458777, 0, -720883, 458777, 0, -65
 
 [node name="Outside" parent="Interactables" instance=ExtResource("25_vhbtc")]
 z_index = -1
-position = Vector2(-169, -162)
+position = Vector2(-163, -158)
 dialog_json = "res://dialogues/JSON/Level3.json"
 dialog_key = "maybe_die"
 skin_path = NodePath("Sprite2D")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Outside"]
 position = Vector2(-5, -9)
@@ -10593,15 +10567,17 @@ shape = SubResource("RectangleShape2D_wr1lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_vwfiv")
+material = SubResource("ShaderMaterial_xu1cu")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
 
 [node name="Elevator" parent="Interactables" instance=ExtResource("25_vhbtc")]
+position = Vector2(0, 4)
 dialog_json = "res://dialogues/JSON/Level3.json"
 dialog_key = "elevator_no_key"
 skin_path = NodePath("Sprite2D")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Elevator"]
 position = Vector2(525, -144)
@@ -10609,7 +10585,7 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_nylcm")
+material = SubResource("ShaderMaterial_m1mx6")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
@@ -10635,7 +10611,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/FireAlarm"]
 z_index = -1
-material = SubResource("ShaderMaterial_mingq")
+material = SubResource("ShaderMaterial_ebxs4")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
@@ -10655,7 +10631,7 @@ height = 0.23
 max_distance = 50.0
 
 [node name="SecondDoor" parent="Doors" instance=ExtResource("22_o5wat")]
-position = Vector2(1045, -131)
+position = Vector2(1045, -127)
 notification_position = 1
 notification = "I need that key"
 
@@ -10663,7 +10639,8 @@ notification = "I need that key"
 position = Vector2(830, -129)
 door_to_open = NodePath("../SecondDoor")
 
-[node name="CameraFoci" type="Node" parent="."]
+[node name="CameraFoci" type="Node2D" parent="."]
+visible = false
 
 [node name="FirstRoom" parent="CameraFoci" instance=ExtResource("24_xe8dw")]
 position = Vector2(-70, -170)
@@ -10780,7 +10757,7 @@ patrol_body_path = NodePath("PathFollow2D")
 metadata/_edit_group_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemy/Path2D"]
-position = Vector2(181, -126)
+position = Vector2(155, -124)
 scale = Vector2(-1, 1)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Enemy/Path2D/PathFollow2D"]
@@ -10790,7 +10767,7 @@ animation = &"walk"
 autoplay = "walk"
 
 [node name="PointLight2D" type="PointLight2D" parent="Enemy/Path2D/PathFollow2D"]
-position = Vector2(31, -2.99999)
+position = Vector2(41.0001, 8.99996)
 rotation = 3.14159
 scale = Vector2(0.5, -0.75)
 color = Color(1, 1, 0.278431, 1)
@@ -10809,8 +10786,39 @@ destroy_when_finished = false
 dialog_key = "police_catch"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemy/Path2D/PathFollow2D/InvisibleDialogue"]
+position = Vector2(10, 10)
 polygon = PackedVector2Array(0, -12, 55, -22, 55, 22, 0, 6, -15, 17, -15, -17)
 
+[node name="SleepingPolice" type="Path2D" parent="Enemy"]
+position = Vector2(995, -8)
+script = ExtResource("37_bfejk")
+patrol_body_path = NodePath("PathFollow2D")
+metadata/_edit_group_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemy/SleepingPolice"]
+position = Vector2(155, -124)
+scale = Vector2(-1, 1)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Enemy/SleepingPolice/PathFollow2D"]
+position = Vector2(0, 5)
+sprite_frames = SubResource("SpriteFrames_0qjov")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="PointLight2D" type="PointLight2D" parent="Enemy/SleepingPolice/PathFollow2D"]
+position = Vector2(41.0001, 8.99996)
+rotation = 3.14159
+scale = Vector2(0.5, -0.75)
+color = Color(1, 1, 0.278431, 1)
+energy = 0.52
+shadow_enabled = true
+texture = ExtResource("40_5v86b")
+texture_scale = 0.5
+
 [node name="Node" type="Node" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("23_ywuix")]
+position = Vector2(-151, -137)
+is_in_pijamas = false
 
 [connection signal="body_entered" from="Enemy/Path2D/PathFollow2D/InvisibleDialogue" to="Enemy/Path2D/PathFollow2D/InvisibleDialogue" method="_on_body_entered"]
