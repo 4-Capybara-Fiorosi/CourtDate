@@ -3,18 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
 [ext_resource type="Texture2D" uid="uid://dmj0p8uqkdrvp" path="res://res/sprites/paintings/scream_painting.png" id="3_3k05w"]
-[ext_resource type="Texture2D" uid="uid://c8yc62ilepusa" path="res://res/tiles/LVL1/pc.png" id="3_uarom"]
-[ext_resource type="Texture2D" uid="uid://bkc2ht2377xis" path="res://res/tiles/LVL1/paint.png" id="4_hm0f3"]
+[ext_resource type="Texture2D" uid="uid://57juj8vm3t3q" path="res://res/tiles/LVL1/pc.png" id="3_uarom"]
+[ext_resource type="Texture2D" uid="uid://dx8jyv5qragja" path="res://res/tiles/LVL1/paint.png" id="4_hm0f3"]
 [ext_resource type="Texture2D" uid="uid://bwmkq4yb12ttb" path="res://res/sprites/window.png" id="4_tl4jn"]
 [ext_resource type="Texture2D" uid="uid://071io0tu7phl" path="res://res/tiles/LVL1/round window.png" id="5_fidgt"]
 [ext_resource type="Texture2D" uid="uid://dmkfm858ny4vl" path="res://res/sprites/paintings/castle_painting.png" id="5_ijf7v"]
-[ext_resource type="Texture2D" uid="uid://bj7y12g4e2os" path="res://res/tiles/LVL1/shower.png" id="6_moy7v"]
+[ext_resource type="Texture2D" uid="uid://qwi71wb63o1n" path="res://res/tiles/LVL1/shower.png" id="6_moy7v"]
 [ext_resource type="Texture2D" uid="uid://erhxi2vyf1r4" path="res://res/sprites/paintings/cat_painting.png" id="6_vypvv"]
-[ext_resource type="Texture2D" uid="uid://b23s01lhlhws3" path="res://res/tiles/LVL1/sink.png" id="7_f6mxj"]
+[ext_resource type="Texture2D" uid="uid://baaqt3u34ycrn" path="res://res/tiles/LVL1/sink.png" id="7_f6mxj"]
 [ext_resource type="Texture2D" uid="uid://cx5fix8yo3xqq" path="res://res/tiles/LVL1/small window.png" id="8_2lrp6"]
 [ext_resource type="Texture2D" uid="uid://cdprrkwnskfsy" path="res://res/tiles/LVL1/stairs.png" id="9_1o48e"]
 [ext_resource type="Texture2D" uid="uid://bkvf6042d1q70" path="res://res/tiles/LVL1/wardrobe.png" id="11_xbrqe"]
-[ext_resource type="Texture2D" uid="uid://c6c3rjd1vae56" path="res://res/tiles/LVL1/wc.png" id="12_0y1oi"]
+[ext_resource type="Texture2D" uid="uid://cemgj4iw3aq74" path="res://res/tiles/LVL1/wc.png" id="12_0y1oi"]
 [ext_resource type="Texture2D" uid="uid://48ffd7sj2il2" path="res://res/tiles/LVL1/interior wall.png" id="14_svsvd"]
 [ext_resource type="Texture2D" uid="uid://bu6tmx3hlai50" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="15_3uxb1"]
 [ext_resource type="Texture2D" uid="uid://b3f7il17bbyuu" path="res://res/sprites/interior free.png" id="16_dyhxm"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://wpune8vr8vy0" path="res://res/sprites/DarkHouseTiles.png" id="17_m0nje"]
 [ext_resource type="Texture2D" uid="uid://b6iyytafegy4r" path="res://res/tiles/LVL1/key.png" id="19_v8bnx"]
 [ext_resource type="Texture2D" uid="uid://oampn7tvec7a" path="res://res/tiles/LVL1/kitchen.png" id="20_5c4ia"]
-[ext_resource type="Texture2D" uid="uid://cv3iplj8sxuf" path="res://res/tiles/LVL1/mirror.png" id="21_p70g1"]
+[ext_resource type="Texture2D" uid="uid://dp2fd0dfkadrd" path="res://res/tiles/LVL1/mirror.png" id="21_p70g1"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="22_o5wat"]
 [ext_resource type="Texture2D" uid="uid://8x8b125ryy3j" path="res://res/tiles/LVL1/nightstand.png" id="22_taor0"]
 [ext_resource type="Script" path="res://scripts/alarm_switch.gd" id="23_5mxgw"]
@@ -10330,7 +10330,7 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lm5sb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2jlm"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10339,13 +10339,13 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r5gur"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gtf3s"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4cxlh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s10ic"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10475,7 +10475,7 @@ shape = SubResource("RectangleShape2D_wr1lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_lm5sb")
+material = SubResource("ShaderMaterial_w2jlm")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
@@ -10491,7 +10491,7 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_r5gur")
+material = SubResource("ShaderMaterial_gtf3s")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
@@ -10517,7 +10517,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/Interactable"]
 z_index = -1
-material = SubResource("ShaderMaterial_4cxlh")
+material = SubResource("ShaderMaterial_s10ic")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")

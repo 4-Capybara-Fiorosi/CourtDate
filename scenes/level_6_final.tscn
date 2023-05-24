@@ -18235,13 +18235,13 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_am58p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tieeh"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1iksr"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nay02"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
@@ -18278,7 +18278,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Sister"]
-material = SubResource("ShaderMaterial_am58p")
+material = SubResource("ShaderMaterial_tieeh")
 position = Vector2(3, 2)
 texture = ExtResource("10_utl1w")
 
@@ -18296,7 +18296,7 @@ skin_path = NodePath("Sprite2D")
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Judge"]
-material = SubResource("ShaderMaterial_1iksr")
+material = SubResource("ShaderMaterial_nay02")
 position = Vector2(3, 1)
 scale = Vector2(1.03125, 1)
 texture = ExtResource("11_y0yor")
@@ -18309,7 +18309,7 @@ collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
 dialog_key = "martin"
-skin_path = NodePath("../Judge/Sprite2D")
+skin_path = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Martin"]
 position = Vector2(0, -1)
@@ -18443,6 +18443,7 @@ scale = Vector2(0.291755, 0.778)
 texture = ExtResource("19_jbr8k")
 
 [node name="CameraFocus" type="Node2D" parent="."]
+visible = false
 
 [node name="CameraFocus2" parent="CameraFocus" instance=ExtResource("15_w211g")]
 position = Vector2(306, -154)
