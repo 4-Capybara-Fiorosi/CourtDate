@@ -15,6 +15,8 @@ func _on_body_entered(body):
 	var player := body as PlayerCharacter;
 	player.velocity.y = self.jump_velocity;
 	
+	var sfx_player :SFXDynamicPlayer = get_tree().root.get_child(0).get_node("SFXPlayer")
+	sfx_player.play_dynamic("res://res/music/accel.mp3", 1.0)
 	deactivate();
 	$RespawnTimer.start(3);
 

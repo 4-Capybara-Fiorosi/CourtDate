@@ -18239,31 +18239,31 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_o17ec"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2qsje"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tnaq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cb5vl"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgwju"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qk368"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c7cfb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xmcq"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yslas"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1sjjb"]
 resource_local_to_scene = true
 shader = ExtResource("9_54c55")
 shader_parameter/width = 0.0
@@ -18287,7 +18287,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-destroy_when_finished = null
+sound_duration = null
 dialog_key = "sister"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18297,7 +18297,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Sister"]
-material = SubResource("ShaderMaterial_o17ec")
+material = SubResource("ShaderMaterial_2qsje")
 position = Vector2(2, -1)
 texture = ExtResource("10_utl1w")
 
@@ -18308,7 +18308,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-destroy_when_finished = null
+sound_duration = null
 dialog_key = "judge"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18317,7 +18317,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Judge"]
-material = SubResource("ShaderMaterial_7tnaq")
+material = SubResource("ShaderMaterial_cb5vl")
 position = Vector2(3, 1)
 scale = Vector2(1.03125, 1)
 texture = ExtResource("11_y0yor")
@@ -18329,6 +18329,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
+sound_duration = null
 dialog_key = "martin"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18338,7 +18339,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Martin"]
-material = SubResource("ShaderMaterial_tgwju")
+material = SubResource("ShaderMaterial_qk368")
 position = Vector2(0, -1)
 texture = ExtResource("12_qq7ha")
 
@@ -18350,6 +18351,7 @@ collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
 destroy_when_finished = true
+sound_duration = null
 dialog_key = "knife"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -18359,7 +18361,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Knife"]
-material = SubResource("ShaderMaterial_c7cfb")
+material = SubResource("ShaderMaterial_5xmcq")
 position = Vector2(6, 5)
 texture = ExtResource("13_3m5rr")
 
@@ -18370,7 +18372,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("8_jgbyn")
 dialog_json = "res://dialogues/JSON/Level6.json"
-destroy_when_finished = null
+sound_duration = null
 dialog_key = "vanessa"
 skin_path = NodePath("Sprite2D")
 
@@ -18379,7 +18381,7 @@ position = Vector2(-2, 6)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Vanessa"]
-material = SubResource("ShaderMaterial_yslas")
+material = SubResource("ShaderMaterial_1sjjb")
 position = Vector2(-2, 22)
 texture = ExtResource("13_swo2r")
 

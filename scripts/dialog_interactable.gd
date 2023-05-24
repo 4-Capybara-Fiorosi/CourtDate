@@ -21,6 +21,9 @@ var dialog_key :String;
 @export var on_dialog_finished :Script = null;
 @export var destroy_when_finished :bool = false;
 
+@export_file var sound = null;
+@export var sound_duration := 1.0;
+
 func _get_property_list():
 	var property_usage = PROPERTY_USAGE_NO_EDITOR
 	if self.dialog_dict != null && not dialog_json.is_empty():
@@ -54,6 +57,8 @@ func interact(player: PlayerCharacter):
 	box.keyString = self.dialog_key;
 	box.on_dialog_finished = self.on_dialog_finished;
 	dialog_supervisor.dialog_finished.connect(player.unpause)
+	var sfx_player :SFXDynamicPlayer = get_tree().root.get_child(0).get_node("SFXPlayer")
+	sfx_player.play_dynamic(sound, sound_duration)
 	player.add_child(dialog_supervisor)
 	if destroy_when_finished:
 		self.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bnkhm6fp3db27"]
+[gd_scene load_steps=81 format=3 uid="uid://bnkhm6fp3db27"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
@@ -10365,7 +10365,7 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppt08"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dqmvo"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10374,7 +10374,13 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6lmoa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3gck"]
+resource_local_to_scene = true
+shader = ExtResource("24_6jih5")
+shader_parameter/width = 0.0
+shader_parameter/outline_color = Color(1, 1, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4llwc"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10383,7 +10389,7 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7fou"]
 size = Vector2(8, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kiq1j"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u0cpw"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10562,6 +10568,7 @@ layer_0/tile_data = PackedInt32Array(-786419, 458777, 0, -720883, 458777, 0, -65
 z_index = -1
 position = Vector2(-163, -158)
 dialog_json = "res://dialogues/JSON/Level3.json"
+sound_duration = null
 dialog_key = "maybe_die"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -10572,7 +10579,7 @@ shape = SubResource("RectangleShape2D_wr1lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_ppt08")
+material = SubResource("ShaderMaterial_dqmvo")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
@@ -10580,6 +10587,7 @@ texture = ExtResource("26_6d2xs")
 [node name="Elevator" parent="Interactables" instance=ExtResource("25_vhbtc")]
 position = Vector2(0, 4)
 dialog_json = "res://dialogues/JSON/Level3.json"
+sound_duration = null
 dialog_key = "elevator_no_key"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
@@ -10590,7 +10598,7 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_6lmoa")
+material = SubResource("ShaderMaterial_h3gck")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
@@ -10604,11 +10612,13 @@ collision_mask = 0
 script = ExtResource("32_olxly")
 dialog_json = "res://dialogues/JSON/Level3.json"
 destroy_when_finished = true
+sound_duration = null
 dialog_key = "keycard"
 skin_path = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Keycard"]
+material = SubResource("ShaderMaterial_4llwc")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("33_ypf5g")
 
@@ -10635,7 +10645,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/FireAlarm"]
 z_index = -1
-material = SubResource("ShaderMaterial_kiq1j")
+material = SubResource("ShaderMaterial_u0cpw")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
@@ -10656,6 +10666,7 @@ max_distance = 50.0
 
 [node name="SecondDoor" parent="Doors" instance=ExtResource("22_o5wat")]
 position = Vector2(1045, -127)
+collision_layer = 0
 notification_position = 1
 notification = "I need that key"
 start_state = 1
