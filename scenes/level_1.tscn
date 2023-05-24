@@ -227,13 +227,13 @@ sources/27 = SubResource("TileSetAtlasSource_ykdts")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
 size = Vector2(16, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gtfvh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1syaq"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u41nt"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_40cpc"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
@@ -301,7 +301,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_531bf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
-material = SubResource("ShaderMaterial_gtfvh")
+material = SubResource("ShaderMaterial_1syaq")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(6, 49, 18, 19)
@@ -316,7 +316,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Computer"]
 z_index = -1
-material = SubResource("ShaderMaterial_u41nt")
+material = SubResource("ShaderMaterial_40cpc")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(48, 97, 34, 31)
