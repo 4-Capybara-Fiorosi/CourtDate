@@ -230,13 +230,13 @@ sources/27 = SubResource("TileSetAtlasSource_ykdts")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531bf"]
 size = Vector2(16, 16)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_slucu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u62ua"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxa0w"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r12nx"]
 resource_local_to_scene = true
 shader = ExtResource("7_ou0k3")
 shader_parameter/width = 0.0
@@ -306,7 +306,7 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_531bf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Newspaper"]
-material = SubResource("ShaderMaterial_slucu")
+material = SubResource("ShaderMaterial_u62ua")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(6, 49, 18, 19)
@@ -322,7 +322,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Iteractables/Computer"]
 z_index = -1
-material = SubResource("ShaderMaterial_fxa0w")
+material = SubResource("ShaderMaterial_r12nx")
 texture = ExtResource("3_65ei4")
 region_enabled = true
 region_rect = Rect2(48, 97, 34, 31)
@@ -334,55 +334,46 @@ shape = SubResource("RectangleShape2D_l0sd7")
 [node name="CameraFoci" type="Node" parent="."]
 
 [node name="Bedroom" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(-112, -24)
 width_in_tiles = 39
 height_in_tiles = 8
 
 [node name="BedroomLadder" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(-480, 40)
 width_in_tiles = 7
 height_in_tiles = 16
 
 [node name="Kitchen" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(-328, 111)
 width_in_tiles = 13
 height_in_tiles = 7
 
 [node name="Hallway" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(-8, 113)
 width_in_tiles = 29
 height_in_tiles = 7
 
 [node name="Upwards" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(266, 40)
 width_in_tiles = 6
 height_in_tiles = 16
 
 [node name="UpwardsHallway" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(263, -153)
 width_in_tiles = 13
 height_in_tiles = 6
 
 [node name="Office" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(40, -151)
 width_in_tiles = 16
 height_in_tiles = 6
 
 [node name="Bathroom" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(445, -152)
 width_in_tiles = 11
 height_in_tiles = 7
 
 [node name="Downstairs" parent="CameraFoci" instance=ExtResource("4_gn37q")]
-visible = false
 position = Vector2(120, 208)
 width_in_tiles = 7
 height_in_tiles = 6
