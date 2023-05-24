@@ -13,7 +13,7 @@ func _on_animation_player_animation_finished(anim_name):
 		$CollShapeOne.disabled = true
 		$StaticBody2D/CollShapeTwo.disabled = true
 		$AnimationPlayer.play("idle")
-		$RespawnTimer.start(3);
+		$RespawnTimer.start(2);
 		
 
 

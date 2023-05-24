@@ -40,5 +40,22 @@
 	[
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "I need the keycard! I need to go to my office."},	
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "Also, I need to hide from the police."}	
+	],
+	"first_ninja":
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cup. I need to go behind the cop"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "I need to activate my Ninja skills."}
+	],
+	"exit_ninja":
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "Blind cop. I am the best ninja ever!"},
+		{"Name": "Police", "Action" : "res://dialogues/Police/police_front.png", "Text" : "Zzzzzz....."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCReading.png", "Text" : "Oh... He was sleeping...."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "How is he sleeping standing up?! Useless cops?!"}
+	],
+	"keycard":
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I found the keycard. I need to go back to the elevator."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "But I need to use my ninja skills to escape the cops."}
 	]
 }
