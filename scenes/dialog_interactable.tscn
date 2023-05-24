@@ -6,7 +6,3 @@
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_xjtlp")
-dialog_json = null
-text_speed = null
-active_color = null
-skin_path = null

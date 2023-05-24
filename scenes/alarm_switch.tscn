@@ -4,7 +4,7 @@
 [ext_resource type="Shader" path="res://res/shaders/outline.gdshader" id="2_a41y2"]
 [ext_resource type="Material" uid="uid://80gymh54kuo2" path="res://res/shaders/interactable_material.tres" id="2_w0wuj"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_akyv5"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_senxc"]
 resource_local_to_scene = true
 shader = ExtResource("2_a41y2")
 shader_parameter/width = 0.0
@@ -23,7 +23,7 @@ script = ExtResource("1_j8xrs")
 skin_path = NodePath("Skin")
 
 [node name="Skin" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_akyv5")
+material = SubResource("ShaderMaterial_senxc")
 use_parent_material = true
 texture = SubResource("CompressedTexture2D_hryqo")
 

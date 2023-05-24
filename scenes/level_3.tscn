@@ -10330,7 +10330,7 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ikn4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lm5sb"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10339,13 +10339,13 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lgnk8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r5gur"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ksduj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4cxlh"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10360,7 +10360,7 @@ size = Vector2(144, 31)
 [node name="Level3" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("23_ywuix")]
-position = Vector2(654, -135)
+position = Vector2(-154, -131)
 climb_speed = 100.0
 is_in_pijamas = false
 metadata/_edit_group_ = true
@@ -10475,7 +10475,7 @@ shape = SubResource("RectangleShape2D_wr1lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_3ikn4")
+material = SubResource("ShaderMaterial_lm5sb")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
@@ -10491,7 +10491,7 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_lgnk8")
+material = SubResource("ShaderMaterial_r5gur")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
@@ -10517,7 +10517,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/Interactable"]
 z_index = -1
-material = SubResource("ShaderMaterial_ksduj")
+material = SubResource("ShaderMaterial_4cxlh")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
@@ -10562,7 +10562,7 @@ height_in_tiles = 9
 [node name="InvisivleDialogue" type="Node" parent="."]
 
 [node name="Police_first" parent="InvisivleDialogue" instance=ExtResource("28_ydgn6")]
-position = Vector2(-154, -126)
+position = Vector2(-125, -131)
 collision_layer = 0
 collision_mask = 2
 dialog_json = "res://dialogues/JSON/Level3.json"
