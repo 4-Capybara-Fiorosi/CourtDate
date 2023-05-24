@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6rigxs76iv5q"]
+[gd_scene load_steps=17 format=3 uid="uid://c6rigxs76iv5q"]
 
 [ext_resource type="Texture2D" uid="uid://ktww1amcujem" path="res://res/sprites/groundFloor.png" id="1_exoll"]
 [ext_resource type="Texture2D" uid="uid://casas4ceqn84k" path="res://res/sprites/level2_tiles.png" id="2_4bf04"]
@@ -7815,11 +7815,25 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="GDScript" id="GDScript_s2mlh"]
+script/source = "extends CharacterBody2D
+
+func on_body_entered(_body):
+	print(\"Hello\")
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c34mu"]
+height = 39.9949
+
 [sub_resource type="Curve2D" id="Curve2D_0f224"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -429, -612, 0, 0, 0, 0, -150, -610)
 }
 point_count = 2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pk32"]
+radius = 7.99979
+height = 42.0134
 
 [node name="Level2" type="Node2D"]
 
@@ -7856,9 +7870,20 @@ position = Vector2(122, -349)
 rotation = -3.13909
 loop = false
 
-[node name="capy-enemy" parent="Path2D/PathFollow2D" instance=ExtResource("6_m2yus")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Path2D/PathFollow2D"]
+collision_layer = 32
+collision_mask = 2
+script = SubResource("GDScript_s2mlh")
+
+[node name="capy-enemy" parent="Path2D/PathFollow2D/CharacterBody2D" instance=ExtResource("6_m2yus")]
 position = Vector2(0, 9)
 rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(5.01998, 7.98749)
+shape = SubResource("CapsuleShape2D_c34mu")
 
 [node name="Path2D2" type="Path2D" parent="."]
 curve = SubResource("Curve2D_0f224")
@@ -7869,5 +7894,14 @@ position = Vector2(-429, -612)
 rotation = 0.00716834
 loop = false
 
-[node name="Capy_cop" parent="Path2D2/PathFollow2D" instance=ExtResource("9_mdlym")]
-position = Vector2(5, 9)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Path2D2/PathFollow2D"]
+collision_layer = 32
+collision_mask = 2
+
+[node name="Capy_cop" parent="Path2D2/PathFollow2D/CharacterBody2D" instance=ExtResource("9_mdlym")]
+position = Vector2(14, -5)
+frame = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D2/PathFollow2D/CharacterBody2D"]
+position = Vector2(5.97116, -4.04291)
+shape = SubResource("CapsuleShape2D_4pk32")
