@@ -10370,7 +10370,7 @@ size = Vector2(144, 31)
 [node name="Level3" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("23_ywuix")]
-position = Vector2(1305, -137)
+position = Vector2(-153, -137)
 climb_speed = 100.0
 is_in_pijamas = false
 metadata/_edit_group_ = true
@@ -10642,9 +10642,8 @@ width_in_tiles = 27
 height_in_tiles = 9
 
 [node name="Fifth Room" parent="CameraFoci" instance=ExtResource("24_xe8dw")]
-visible = false
-position = Vector2(1156, -169)
-width_in_tiles = 15
+position = Vector2(1158, -169)
+width_in_tiles = 14
 height_in_tiles = 9
 
 [node name="Sixth Room" parent="CameraFoci" instance=ExtResource("24_xe8dw")]
@@ -10656,7 +10655,7 @@ height_in_tiles = 9
 [node name="InvisivleDialogue" type="Node" parent="."]
 
 [node name="Police_first" parent="InvisivleDialogue" instance=ExtResource("28_ydgn6")]
-position = Vector2(-125, -131)
+position = Vector2(-151, -130)
 collision_layer = 0
 collision_mask = 2
 dialog_json = "res://dialogues/JSON/Level3.json"
@@ -10720,7 +10719,7 @@ position = Vector2(743, -161)
 position = Vector2(918, -161)
 
 [node name="BreakingPlatform10" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
-position = Vector2(863, -161)
+position = Vector2(858, -161)
 
 [node name="BreakingPlatform11" parent="BreakingPlatforms" instance=ExtResource("25_hj6cf")]
 position = Vector2(801, -161)
