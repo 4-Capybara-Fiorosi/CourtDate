@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c6rigxs76iv5q"]
+[gd_scene load_steps=26 format=3 uid="uid://c6rigxs76iv5q"]
 
 [ext_resource type="Texture2D" uid="uid://ktww1amcujem" path="res://res/sprites/groundFloor.png" id="1_exoll"]
 [ext_resource type="Texture2D" uid="uid://casas4ceqn84k" path="res://res/sprites/level2_tiles.png" id="2_4bf04"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="10_osg2f"]
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="11_pg8og"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="12_3siw6"]
+[ext_resource type="PackedScene" uid="uid://bwwu2mqvu262o" path="res://scenes/spawn.tscn" id="13_pe0jb"]
 [ext_resource type="PackedScene" uid="uid://b12i7mscu7k5x" path="res://scenes/player.tscn" id="23_550gs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nac5c"]
@@ -8005,3 +8006,6 @@ visible = false
 position = Vector2(-152, -377)
 width_in_tiles = 37
 height_in_tiles = 7
+
+[node name="Spawn" parent="." instance=ExtResource("13_pe0jb")]
+position = Vector2(-169, -460)
