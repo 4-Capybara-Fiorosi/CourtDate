@@ -37,11 +37,10 @@ func _get_property_list():
 	return properties
 
 
-func _on_body_entered(body):
+func _on_body_entered(body): 
 	if not body is PlayerCharacter:
 		return;
 	var player_body := body as PlayerCharacter; 
-	
 	var bounding_box :Rect2 = $DefaultShape.shape.get_rect()
 	
 	var top = self.position.y - bounding_box.size.y / 2;
@@ -57,3 +56,4 @@ func _on_body_entered(body):
 		var zoom_1 = 1 / min(zoom_x, zoom_y);
 		zoom = Vector2(zoom_1, zoom_1)
 	player_body.focus_camera(top, right, bot, left, zoom);
+	
