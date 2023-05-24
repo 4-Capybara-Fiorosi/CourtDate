@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bs4rmxua7e5n8"]
+[gd_scene load_steps=32 format=3 uid="uid://bs4rmxua7e5n8"]
 
 [ext_resource type="Texture2D" uid="uid://bu6tmx3hlai50" path="res://res/sprites/Tiny Platform Quest Tiles.png" id="1_tp77f"]
 [ext_resource type="Texture2D" uid="uid://b3f7il17bbyuu" path="res://res/sprites/interior free.png" id="2_2jse3"]
@@ -18,7 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://c5y0w40d2r7ly" path="res://res/characters/vanessa.png" id="14_3a70j"]
 [ext_resource type="PackedScene" uid="uid://bg6y0tcdde6sm" path="res://scenes/door.tscn" id="14_4bnk3"]
 [ext_resource type="PackedScene" uid="uid://bmc8xwmwajcxi" path="res://scenes/camera_focus.tscn" id="15_w211g"]
-[ext_resource type="Texture2D" uid="uid://k5f2xiqbfhdq" path="res://res/tiles/LVL5/lvl 5 bgd.png" id="16_xkr6i"]
+[ext_resource type="Texture2D" uid="uid://ci4esfk2rru0u" path="res://res/tiles/LVL 6/lvl6.png" id="18_3wp20"]
+[ext_resource type="Texture2D" uid="uid://olx0v1j5yohe" path="res://res/tiles/LVL 6/lvl6_2.png" id="19_jbr8k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l64uo"]
 texture = ExtResource("1_tp77f")
@@ -18428,13 +18429,18 @@ position = Vector2(232, -381)
 door_to_open = NodePath("../Door2")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Part1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(733, -622)
-texture = ExtResource("16_xkr6i")
+position = Vector2(437.438, -327)
+scale = Vector2(0.983942, 0.988)
+texture = ExtResource("18_3wp20")
+
+[node name="Part2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1018.64, -301)
+scale = Vector2(0.291755, 0.778)
+texture = ExtResource("19_jbr8k")
 
 [node name="CameraFocus" type="Node2D" parent="."]
 
