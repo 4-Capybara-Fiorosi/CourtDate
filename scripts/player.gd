@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var friction :float = 0.1
 ## Ladder climbing speed in px/s
 @export var climb_speed :float = 2
+## keycard for the police level
+@export var mustHaveKeyCard :bool = false
 
 ## Jump Height in pixels
 @export var jump_height :float = 32
@@ -40,13 +42,16 @@ var can_interact := true;
 func pause():
 	is_paused = true;
 	can_interact = false;
+	get_tree().paused = true
 
 
-func unpause():
+func unpause(on_dialog_finished: Script):
 	is_paused = false;
-	get_tree().create_timer(1.0).timeout.connect(func():
+	get_tree().create_timer(5.0).timeout.connect(func():
 		self.can_interact = true; );
-
+	get_tree().paused = false
+	if on_dialog_finished != null:
+		on_dialog_finished.new().run(self)
 
 func _physics_process(delta :float):
 	if is_paused:
@@ -119,16 +124,12 @@ func _get_vertical_movement_direciton() -> float:
 	return Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
 
-func focus_camera(top: float, right: float, bot: float, left: float) -> void:
+func focus_camera(top: float, right: float, bot: float, left: float, zoom: Vector2) -> void:
 	$Camera2D.limit_top = top
 	$Camera2D.limit_right = right
 	$Camera2D.limit_bottom = bot
 	$Camera2D.limit_left = left
-	const window_size := Vector2(320, 320)
-	var zoom_x :float = abs(left - right) / window_size.x
-	var zoom_y :float = abs(top - bot) / window_size.y
-	var zoom = 1 / min(zoom_x, zoom_y)
-	$Camera2D.zoom = Vector2(zoom, zoom)
+	$Camera2D.zoom = zoom
 
 
 func _on_ladder_enter(_body):

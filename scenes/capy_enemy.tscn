@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqd8r5hy56tld"]
+
+[ext_resource type="Texture2D" uid="uid://dct1tyq3whchd" path="res://res/characters/capyEnemy.png" id="1_2cev5"]
+[ext_resource type="Script" path="res://scripts/CapyEnemyAnimation.gd" id="2_vyveo"]
+
+[sub_resource type="Animation" id="Animation_cpv18"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wv8k2"]
+_data = {
+"walk": SubResource("Animation_cpv18")
+}
+
+[node name="capy-enemy" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_2cev5")
+hframes = 8
+vframes = 5
+script = ExtResource("2_vyveo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wv8k2")
+}

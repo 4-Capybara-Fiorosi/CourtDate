@@ -1,0 +1,28 @@
+{
+	"sister": 
+	[
+				{"Name": "Edwarda", "Action" : "res://dialogues/level_6/sister.png", "Text" : "I am your sister's spirit! You will find in this cabin the knife i was killed with!"},
+				{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "I miss you so much sister! I want Vanessa and Martin to pay for your death!"}
+	],
+	"knife":
+	[
+				{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "This must be the knife my sister was killed with!"},		
+	],
+	"martin":
+	[
+				{"Name": "Martin", "Action" : "res://dialogues/level_6/martin.png", "Text" : "You killed my wife! You are a criminal!"},
+				{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I know the truth and both of you will go to jail!"},		
+				
+	],
+	"vanessa":
+	[
+				{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Vanessa, everything between us is over! You are a criminal!"},		
+				{"Name": "Vanessa", "Action" : "res://dialogues/level_6/vanessa.png", "Text" : "Please Rick, don't leave me! I am innocent"},
+				{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Tell this to the judge!"},
+	],
+	"judge":
+	[			{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Your honor, i am inocent, and i found the crime weapon! "},		
+				{"Name": "Judge", "Action" : "res://dialogues/level_6/judge.png", "Text" : "Hmm... We will make a DNA test and we will see!"},
+	]
+	
+}
