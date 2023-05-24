@@ -17971,13 +17971,13 @@ sources/25 = SubResource("TileSetAtlasSource_r3jtj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bsa"]
 size = Vector2(27, 31)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8cj2y"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5d31t"]
 resource_local_to_scene = true
 shader = ExtResource("9_8t7r1")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_upeg7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2st8b"]
 resource_local_to_scene = true
 shader = ExtResource("9_8t7r1")
 shader_parameter/width = 0.0
@@ -18028,7 +18028,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_b6bsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Duck"]
-material = SubResource("ShaderMaterial_8cj2y")
+material = SubResource("ShaderMaterial_5d31t")
 position = Vector2(6, 5)
 texture = ExtResource("5_ljokr")
 
@@ -18042,7 +18042,7 @@ dialog_key = "capyracle"
 skin_path = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Capyracle"]
-material = SubResource("ShaderMaterial_upeg7")
+material = SubResource("ShaderMaterial_2st8b")
 position = Vector2(5, -6)
 texture = ExtResource("10_41pfe")
 region_enabled = true
