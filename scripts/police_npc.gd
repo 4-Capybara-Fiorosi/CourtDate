@@ -1,17 +1,21 @@
-@tool
-extends Sprite2D
+extends Node2D
 
-@export var leftLightLength = 16:
-	set(new_value):
-		leftLightLength = new_value
-		print($LeftLight)
-		$LeftLight.polygon[0].x = -leftLightLength
-		$LeftLight.polygon[1].x = -leftLightLength
-		$LeftLight.polygon[2].x = -leftLightLength
+@export var hasFrontalDirection := true
+@export var awaitTime := 1
+var seesLeft := true
+var leftSuit = preload("res://dialogues/Police/police_left.png")
+var rightSuit = preload("res://dialogues/Police/police_normal.png")
 
-@export var rightLightLength = 16:
-	set(new_value):
-		rightLightLength = new_value
-		$RightLight.polygon[5].x = rightLightLength
-		$RightLight.polygon[4].x = rightLightLength
-		$RightLight.polygon[3].x = rightLightLength
+func _ready():
+	if hasFrontalDirection == true:
+		return
+	while true:
+		if seesLeft == true:
+			$skin.texture = leftSuit
+		else:
+			$skin.texture = rightSuit
+			
+		$LeftPoly.visible = seesLeft
+		$RightPoly.visible = !seesLeft
+		seesLeft = !seesLeft
+		await get_tree().create_timer(awaitTime).timeout

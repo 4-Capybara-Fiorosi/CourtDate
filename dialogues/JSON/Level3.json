@@ -35,5 +35,10 @@
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "He must not see him, otherwise I will go to jail."},
 		{"Name": "Police", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Maybe these platforms can help. I think if I step on them, they will be destroyed"},
 		{"Name": "Police", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "So I must hurry!"}
+	],
+	"elevator_no_key":
+	[
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "I need the keycard! I need to go to my office."},	
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "Also, I need to hide from the police."}	
 	]
 }
