@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://bnkhm6fp3db27"]
+[gd_scene load_steps=80 format=3 uid="uid://bnkhm6fp3db27"]
 
 [ext_resource type="Texture2D" uid="uid://ke63xvjeeop0" path="res://res/tiles/LVL1/bed.png" id="1_3iidr"]
 [ext_resource type="Texture2D" uid="uid://cl1bdxp4eaiyc" path="res://res/tiles/LVL1/floor.png" id="2_wwebd"]
@@ -38,6 +38,8 @@
 [ext_resource type="PackedScene" uid="uid://cehjo6dkl4pi0" path="res://scenes/invisible_dialogue.tscn" id="28_ydgn6"]
 [ext_resource type="Texture2D" uid="uid://s1we7r6yqkbj" path="res://res/tiles/LVL3/level3_decorative.png" id="29_does0"]
 [ext_resource type="Texture2D" uid="uid://cwlkxxro1ve7r" path="res://res/sprites/elevator_anim.png" id="30_kft8i"]
+[ext_resource type="Script" path="res://scripts/dialog_interactable.gd" id="32_olxly"]
+[ext_resource type="Texture2D" uid="uid://c2d0j8ce7252e" path="res://res/tiles/LVL3/key_card.png" id="33_ypf5g"]
 [ext_resource type="PackedScene" uid="uid://cpfs8ftthn8hh" path="res://scenes/capy_key.tscn" id="34_md7ik"]
 [ext_resource type="Script" path="res://scripts/InvisibleDialogue.gd" id="35_pmcd8"]
 [ext_resource type="Script" path="res://scripts/path_patrol.gd" id="37_bfejk"]
@@ -10363,7 +10365,7 @@ sources/25 = SubResource("TileSetAtlasSource_h52s1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1lu"]
 size = Vector2(16, 80)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xu1cu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ppt08"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10372,13 +10374,16 @@ shader_parameter/outline_color = Color(1, 1, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kxfl"]
 size = Vector2(60, 58)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m1mx6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6lmoa"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
 shader_parameter/outline_color = Color(1, 1, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ebxs4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7fou"]
+size = Vector2(8, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kiq1j"]
 resource_local_to_scene = true
 shader = ExtResource("24_6jih5")
 shader_parameter/width = 0.0
@@ -10567,7 +10572,7 @@ shape = SubResource("RectangleShape2D_wr1lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Outside"]
 z_index = -1
-material = SubResource("ShaderMaterial_xu1cu")
+material = SubResource("ShaderMaterial_ppt08")
 position = Vector2(-4.5, -9)
 scale = Vector2(1.0625, 1.025)
 texture = ExtResource("26_6d2xs")
@@ -10585,11 +10590,30 @@ shape = SubResource("RectangleShape2D_3kxfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interactables/Elevator"]
 z_index = -1
-material = SubResource("ShaderMaterial_m1mx6")
+material = SubResource("ShaderMaterial_6lmoa")
 position = Vector2(525, -144.5)
 scale = Vector2(2, 1.84375)
 texture = ExtResource("30_kft8i")
 hframes = 3
+
+[node name="Keycard" type="Area2D" parent="Interactables"]
+z_index = -1
+position = Vector2(1393, -131)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("32_olxly")
+dialog_json = "res://dialogues/JSON/Level3.json"
+destroy_when_finished = true
+dialog_key = "keycard"
+skin_path = NodePath("Sprite2D")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactables/Keycard"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("33_ypf5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Keycard"]
+shape = SubResource("RectangleShape2D_h7fou")
 
 [node name="Doors" type="Node" parent="."]
 
@@ -10611,7 +10635,7 @@ skin_path = NodePath("AlarmSwitch")
 
 [node name="AlarmSwitch" type="Sprite2D" parent="Doors/FireAlarm"]
 z_index = -1
-material = SubResource("ShaderMaterial_ebxs4")
+material = SubResource("ShaderMaterial_kiq1j")
 position = Vector2(-10.724, 9.336)
 scale = Vector2(0.483, 0.483)
 texture = ExtResource("24_1lmx1")
@@ -10634,6 +10658,7 @@ max_distance = 50.0
 position = Vector2(1045, -127)
 notification_position = 1
 notification = "I need that key"
+start_state = 1
 
 [node name="CapyKey" parent="Doors" instance=ExtResource("34_md7ik")]
 position = Vector2(830, -129)
@@ -10818,7 +10843,7 @@ texture_scale = 0.5
 [node name="Node" type="Node" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("23_ywuix")]
-position = Vector2(-151, -137)
+position = Vector2(1307, -135)
 is_in_pijamas = false
 
 [connection signal="body_entered" from="Enemy/Path2D/PathFollow2D/InvisibleDialogue" to="Enemy/Path2D/PathFollow2D/InvisibleDialogue" method="_on_body_entered"]
