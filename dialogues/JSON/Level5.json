@@ -1,7 +1,7 @@
 {
 	"duck" : 
 	[
-		{"Name": "Duck", "Action" : "res://dialogues/level_5/duck1.png", "Text" : "There is in this park a capyracle. He can tell you who killed your sister!"},
+		{"Name": "Duck", "Action" : "res://dialogues/level_5/duck1.png", "Text" : "There is in this park a capyracle. He can help you!"},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Thank you so much, Duck!"},
 		{"Name": "Duck", "Action" : "res://dialogues/level_5/duck1.png", "Text" : "It's my pleasure to help you!"}
 	],
@@ -9,11 +9,9 @@
 	[
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Good evening, sacred capyracle! I want to ask you something..."},
 		{"Name": "Capyracle", "Action" : "res://dialogues/level_5/capyracle1.png", "Text" : "I aleady know what is your question."},
-		{"Name": "Capyracle", "Action" : "res://dialogues/level_5/capyracle1.png", "Text" : "You want to know who killed your sister."},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "That is right!"},
-		{"Name": "Capyracle", "Action" : "res://dialogues/level_5/capyracle1.png", "Text" : "The criminals are your wife, Vanessa, and your sister's husband, Martin!"},
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Really! My dear Vanessa..."},
-		{"Name": "Capyracle", "Action" : "res://dialogues/level_5/capyracle1.png", "Text" : "Yes, they want to have all your father's money and leave the country."},
+		{"Name": "Capyracle", "Action" : "res://dialogues/level_5/capyracle1.png", "Text" : "You should go to your sister's cabin There you will find the murder weapon."},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "Wow! Thank you so much"},
+		{"Name": "Capyracle", "Action" : "res://dialogues/level_5/capyracle1.png", "Text" : "No problem! I see your future will be bright"},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/MCCry.png", "Text" : "Thank you so much, sacred Capyracle!"}
 	]
 }
