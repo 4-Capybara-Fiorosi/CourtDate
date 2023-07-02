@@ -38,12 +38,12 @@
 	],
 	"elevator_no_key":
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I can use the elevator"},	
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "What? Elevator is broken? Damn you, Martin"}	
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCNormal.png", "Text" : "I can use the elevator."},	
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCAngry.png", "Text" : "What? Elevator is broken? Damn you, Martin!"}	
 	],
 	"first_ninja":
 	[
-		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cop. I need to go behind the cop"},
+		{"Name": "Rick", "Action" : "res://dialogues/MC/MCSurprised.png", "Text" : "Oh no! There is a cop. I need to go behind him."},
 		{"Name": "Rick", "Action" : "res://dialogues/MC/ninjaMC.png", "Text" : "I need to activate my Ninja skills."}
 	],
 	"exit_ninja":
